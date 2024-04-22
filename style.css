@@ -37,4 +37,39 @@
     width: 80%;
     padding: 10px;
     margin-bottom: 20px;
+
+  }
+  .clicked {
+    background-color: greenyellow;
+  }
+
+  .highlighted {
+    background-color: greenyellow;
+    cursor: pointer;
+  }
+
+  .framed {
+    border: 2px solid blue;
+  }
+
+  .green-bordered {
+    border: 2px solid green;
+  }
+  #product-list {
+    list-style-type: none;
+    display: flex;
+    
+    width: 500px;
+    flex-wrap: wrap;
+  }
+
+  #product-list li {
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 8px;
+
+  }
+  .products-list{
+    border: 2px solid black;
   }
