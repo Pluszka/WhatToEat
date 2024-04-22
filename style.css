@@ -118,12 +118,12 @@
     height: auto;
   }
   .scrollable-area {
-    height: 300px; /* adjust the height as needed */
+    height: 300px; 
     overflow-y: auto;
   }
   main {
-    height: 400px; /* Ustawiamy wysokość kontenera main */
-    overflow-y: auto; /* Dodajemy pasek przewijania dla osi Y */
+    height: 400px; 
+    overflow-y: auto;
     display: flex;
   }
   .search-container {
@@ -165,4 +165,25 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+  }
+
+  .products-list {
+    padding-top: 40px;
+    height: 60%; 
+    width: 100%;
+    overflow-y: auto;
+    border-radius: 10px;
+    border: none;
+  }
+  .search-bar {
+    border-radius: 10px;
+  }
+  body {
+    background-color: yellowgreen;
+  }
+  .left-area {
+    background-color: #4CAF50;
+    border-radius: 40px;
+    padding: 0;
+    
   }

@@ -52,7 +52,7 @@ const songs = [
     image: "food8.jpg",
     title: "Food 8",
   },
-  // Add more food images and titles here
+
 ];
 
 const createTable = (rows, cols) => {
