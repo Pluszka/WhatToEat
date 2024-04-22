@@ -107,14 +107,16 @@
     background-color: #007bff;
   }
   .picture-container {
-    width: 30%;
-    margin: 1%;
-    float: left;
-    box-sizing: border-box;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    border: 1px solid #8a0b0b;
+    background-image: url(assets/images.jpg);
   }
   
   .picture-container img {
-    width: 100%;
+    width: auto;
     height: auto;
   }
   .scrollable-area {
@@ -191,11 +193,4 @@
     background-color: #24a328;
     margin: 50px;
     border-radius: 20px;
-  }
-  .picture-container {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    border-radius: 200px;
-    border: 1px solid #8a0b0b;
   }

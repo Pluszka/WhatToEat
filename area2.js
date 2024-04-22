@@ -1,7 +1,7 @@
 const tableContainer = document.getElementById("table-container");
 const songs = [
   {
-    image: "food1.jpg",
+    image: "assets/images.jpg",
     title: "Food 1",
   },
   {
