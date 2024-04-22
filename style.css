@@ -126,3 +126,43 @@
     overflow-y: auto; /* Dodajemy pasek przewijania dla osi Y */
     display: flex;
   }
+  .search-container {
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .search-container input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .search-container button[type="submit"] {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 20px auto;
+  }
+  
+  .button-container button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
