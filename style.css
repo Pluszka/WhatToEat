@@ -182,8 +182,20 @@
     background-color: yellowgreen;
   }
   .left-area {
-    background-color: #4CAF50;
+    background-color: #24a328;
     border-radius: 40px;
     padding: 0;
     
+  }
+  .right-area {
+    background-color: #24a328;
+    margin: 50px;
+    border-radius: 20px;
+  }
+  .picture-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    border: 1px solid #8a0b0b;
   }
