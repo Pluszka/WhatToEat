@@ -1,8 +1,9 @@
 const tableContainer = document.getElementById("table-container");
 const dania = [
   {
-    image: "food1.jpg",
-    title: "Food 1",
+    image: "assets/burgery.jpg",
+    title: "Danie Disa jebanie",
+    
   },
   {
     image: "food2.jpg",
@@ -74,6 +75,12 @@ const createPictureContainer = (danie) => {
   img.src = danie.image;
   img.alt = danie.title;
   pictureContainer.appendChild(img);
+
+  const title = document.createElement("div");
+  title.classList.add("title");
+  title.textContent = danie.title;
+  pictureContainer.appendChild(title);
+
 
   return pictureContainer;
 };
