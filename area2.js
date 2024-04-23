@@ -1,7 +1,7 @@
 const tableContainer = document.getElementById("table-container");
-const songs = [
+const dania = [
   {
-    image: "assets/images.jpg",
+    image: "food1.jpg",
     title: "Food 1",
   },
   {
@@ -66,26 +66,26 @@ const createTable = (rows, cols) => {
   return table;
 };
 
-const createPictureContainer = (song) => {
+const createPictureContainer = (danie) => {
   const pictureContainer = document.createElement("div");
   pictureContainer.classList.add("picture-container");
 
   const img = document.createElement("img");
-  img.src = song.image;
-  img.alt = song.title;
+  img.src = danie.image;
+  img.alt = danie.title;
   pictureContainer.appendChild(img);
 
   return pictureContainer;
 };
 
-const numRows = Math.ceil(songs.length / 2);
-const numCols = Math.max(2, songs.length);
+const numRows = Math.ceil(dania.length / 2);
+const numCols = Math.max(2, dania.length);
 const table = createTable(numRows, numCols);
 
-for (let i = 0; i < songs.length; i++) {
+for (let i = 0; i < dania.length; i++) {
   const row = Math.floor(i / numCols);
   const col = i % numCols;
-  table[row][col] = createPictureContainer(songs[i]);
+  table[row][col] = createPictureContainer(dania[i]);
 }
 
 table.forEach((row) => {
