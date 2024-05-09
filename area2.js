@@ -3,6 +3,9 @@ const dania = [
   {
     image: "assets/burgery.jpg",
     title: "Danie Disa jebanie",
+    subtext: "This is a subtext for Danie Disa jebanie",
+    subtext1: "This is a subtext for Danie Disa jebanie2",
+    subtext2: "This is a subtext for Danie Disa jebanie3",
     
   },
   {
@@ -80,7 +83,21 @@ const createPictureContainer = (danie) => {
   title.classList.add("title");
   title.textContent = danie.title;
   pictureContainer.appendChild(title);
+  
+  const subtext = document.createElement("div");
+  subtext.classList.add("subtext");
+  subtext.textContent = danie.subtext;
+  pictureContainer.appendChild(subtext);
 
+  const subtext1 = document.createElement("div");
+  subtext1.classList.add("subtext1");
+  subtext1.textContent = danie.subtext1;
+  pictureContainer.appendChild(subtext1);
+
+  const subtext2 = document.createElement("div");
+  subtext2.classList.add("subtext2");
+  subtext2.textContent = danie.subtext2;
+  pictureContainer.appendChild(subtext2)
 
   return pictureContainer;
 };

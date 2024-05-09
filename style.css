@@ -27,13 +27,13 @@
     justify-content: center;
     padding: 20px;
     box-sizing: border-box;
-    background-color: #24a328;
+    background-color: #ff7b00;
     margin: 50px;
     border-radius: 20px;
-    background-image: url(assets/deska.png);
+    /* background-image: url(assets/deska.png);
     background-position: center; 
     background-repeat: no-repeat; 
-    background-size: cover;
+    background-size: cover; */
   }
   
   .smaller-area {
@@ -98,20 +98,6 @@
     justify-content: center;
   }
   
-  .picture-container {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    border: 1px solid #ccc;
-    display: flex;
-  }
-  
-  .picture-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
   .progress-bar {
     position: absolute;
     bottom: 0;
@@ -123,18 +109,19 @@
   .picture-container {
     position: relative;
     width: 200px;
-    height: 200px;
-    border-radius: 200px;
+    height: 300px;
+    border-radius: 20px;
     border: 1px solid #8a0b0b;
-    background-image: url(assets/images.jpg);
+    /* background-image: url(assets/images.jpg); */
+    display: flex;
   }
   
   .picture-container img {
     object-fit: cover;
     width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    position: center;
+    height: 40%;
+    position: absolute;
+    top: 60px;
   }
   .scrollable-area {
     height: 300px; 
@@ -174,16 +161,20 @@
     display: flex;
     justify-content: space-between;
     width: 70%;
-    margin: 20px auto;
+    /* margin: 20px auto; */
   }
   
   .button-container button {
     padding: 10px;
-    background-color: #4CAF50;
-    color: white;
+    background-image: url(assets/etykieta.png);
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    
   }
 
   .products-list {
@@ -196,9 +187,22 @@
   }
   .search-bar {
     border-radius: 10px;
+    margin-top: 3%;
+    /* background-image: url(assets/bagieta.png);
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; */
+  }
+  .search-bar-div{
+    background-image: url(assets/bagieta.png);
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    width: 80%;
+    padding-left: 15%;
   }
   body {
-    background-color: yellowgreen;
+    background-color: rgb(255, 255, 255);
   }
   /* .left-area {
     background-color: #24a328;
@@ -218,13 +222,39 @@
 
   .title {
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 10px;
-    border-radius: 0 0 10px 10px;
+    border-radius: 10px 10px 0 0;
     text-align: center;
-    margin-top: 10px;
+  }
+  .subtext {
+    font-size: 12px;
+    color: #1cee00;
+    margin-top: 30px;
+    position: absolute;
+    text-align: center;
+  }
+  .subtext1{
+    font-size: 20px;
+    color: #00fff2;
+    margin-top: 180px;
+    margin-bottom: 0px;
+    position: absolute;
+    text-align: center;
+  }
+
+  .subtext2 {
+    font-size: 12px;
+    color: #f12323;
+    margin-top: 230px;
+    position: absolute;
+    text-align: center;
+
+  }
+  .underserach {
+    width: 80%;
+    height: 10%;
   }
