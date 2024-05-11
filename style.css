@@ -45,8 +45,14 @@
     justify-content: center;
     margin-top: 20px;
   }
-  
-  input[type="search"] {
+  .search-bar::placeholder{
+    color:black;
+  }
+  .search-bar {
+    border: none;
+    background: rgba(100,100,100,0.2);
+    font-size: 1rem;
+    color:black;
     width: 80%;
     padding: 10px;
     margin-bottom: 20px;
