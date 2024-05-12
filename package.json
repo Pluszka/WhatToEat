@@ -1,0 +1,24 @@
+{
+  "name": "whattoeat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pluszka/WhatToEat.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pluszka/WhatToEat/issues"
+  },
+  "homepage": "https://github.com/Pluszka/WhatToEat#readme",
+  "devDependencies": {
+    "sass": "^1.77.1"
+  },
+  "dependencies": {
+    "node-sass": "^9.0.0"
+  }
+}
