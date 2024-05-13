@@ -1,6 +1,53 @@
 body {
   margin: 0; }
 
+*, *::before, *::after {
+  box-sizing: border-box; }
+
+.input {
+  background: transparent;
+  background-image: url("../img/baguette.png");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: local;
+  color: black;
+  width: 100%;
+  height: 3rem;
+  padding: 0;
+  border: none;
+  padding: 0 1.5rem; }
+  .input::placeholder {
+    color: black; }
+
+.shelf {
+  background-image: url("../img/middleShelf.png");
+  width: 100vw;
+  height: 6rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center; }
+  .shelf__first {
+    background-image: url("../img/topShelf.png"); }
+  .shelf__container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw; }
+
+.topShelf {
+  background-image: url("../img/topShelf.png"); }
+  .topShelf__image {
+    position: absolute;
+    z-index: -10;
+    width: 100vw; }
+  .topShelf__heading {
+    margin: 0; }
+
 .flex-container {
   display: flex; }
   .flex-container__column {

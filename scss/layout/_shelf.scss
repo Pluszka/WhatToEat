@@ -1,0 +1,35 @@
+.shelf{
+    background-image: url('../img/middleShelf.png');
+    width: 100vw;
+    height:6rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    &__first{ 
+
+    background-image: url('../img/topShelf.png');
+    }
+    &__container{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;    
+    }
+}
+.topShelf{
+    background-image: url('../img/topShelf.png');
+    
+    &__image{
+        position:absolute;
+        z-index: -10;
+        width: 100vw;
+
+    }
+    &__heading{
+        margin: 0;
+    }
+}
