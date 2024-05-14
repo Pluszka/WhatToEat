@@ -1,35 +1,49 @@
 .shelf{
-    background-image: url('../img/middleShelf.png');
     width: 100vw;
-    height:6rem;
-    background-repeat: no-repeat;
-    background-position: center;
     text-align: center;
-    background-size: contain;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    &__first{ 
+    display: grid;
+    grid-template-columns: 1fr;
+    &__image{
 
-    background-image: url('../img/topShelf.png');
+        grid-row-start: 1;
+        grid-column-start: 1;
+        width: 100dvw;
     }
     &__container{
         display: flex;
         flex-direction: column;
         width: 100vw;    
     }
+    &__baguette{
+        align-self: end;
+        margin-bottom: 7dvh;
+        grid-row-start: 1;
+        grid-column-start: 1;
+
+    }
 }
 .topShelf{
-    background-image: url('../img/topShelf.png');
-    
+
+    display: grid;
+    grid-template-columns: 1fr;
     &__image{
-        position:absolute;
-        z-index: -10;
+        grid-row-start: 1;
+        grid-column-start: 1;
         width: 100vw;
+        z-index: -100;
 
     }
     &__heading{
-        margin: 0;
+        grid-row-start: 1;
+        align-self: center;
+        grid-column-start: 1;;
+        margin: 0rem;
+    }
+    &__productCount{
+        align-self: end;
+        padding-bottom:1rem;
+        grid-row-start: 1;
+        grid-column-start: 1;
+        margin:0;
     }
 }

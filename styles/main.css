@@ -21,31 +21,42 @@ body {
     color: black; }
 
 .shelf {
-  background-image: url("../img/middleShelf.png");
   width: 100vw;
-  height: 6rem;
-  background-repeat: no-repeat;
-  background-position: center;
   text-align: center;
-  background-size: contain;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center; }
-  .shelf__first {
-    background-image: url("../img/topShelf.png"); }
+  display: grid;
+  grid-template-columns: 1fr; }
+  .shelf__image {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    width: 100dvw; }
   .shelf__container {
     display: flex;
     flex-direction: column;
     width: 100vw; }
+  .shelf__baguette {
+    align-self: end;
+    margin-bottom: 7dvh;
+    grid-row-start: 1;
+    grid-column-start: 1; }
 
 .topShelf {
-  background-image: url("../img/topShelf.png"); }
+  display: grid;
+  grid-template-columns: 1fr; }
   .topShelf__image {
-    position: absolute;
-    z-index: -10;
-    width: 100vw; }
+    grid-row-start: 1;
+    grid-column-start: 1;
+    width: 100vw;
+    z-index: -100; }
   .topShelf__heading {
+    grid-row-start: 1;
+    align-self: center;
+    grid-column-start: 1;
+    margin: 0rem; }
+  .topShelf__productCount {
+    align-self: end;
+    padding-bottom: 1rem;
+    grid-row-start: 1;
+    grid-column-start: 1;
     margin: 0; }
 
 .flex-container {
