@@ -1,0 +1,266 @@
+.container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .left-area {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    background-image: url(assets/opia.png);
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    border-radius: 40px;
+    padding: 0;
+  }
+  
+  .right-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #ff7b00;
+    margin: 50px;
+    border-radius: 20px;
+    /* background-image: url(assets/deska.png);
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; */
+  }
+  
+  .smaller-area {
+    width: 80%;
+    height: 50%;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .search-bar::placeholder{
+    color:black;
+  }
+  .search-bar {
+    border: none;
+    background: rgba(100,100,100,0.2);
+    font-size: 1rem;
+    color:black;
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+
+  }
+  .clicked {
+    background-color: greenyellow;
+  }
+
+  .highlighted {
+    background-color: greenyellow;
+    cursor: pointer;
+  }
+
+  .framed {
+    border: 2px solid blue;
+  }
+
+  .green-bordered {
+    border: 2px solid green;
+  }
+  #product-list {
+    list-style-type: none;
+    display: flex;
+    
+    width: 500px;
+    flex-wrap: wrap;
+  }
+
+  #product-list li {
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 8px;
+
+  }
+  .products-list{
+    border: 2px solid black;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  #table-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #007bff;
+  }
+  .picture-container {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    border-radius: 20px;
+    border: 1px solid #8a0b0b;
+    /* background-image: url(assets/images.jpg); */
+    display: flex;
+  }
+  
+  .picture-container img {
+    object-fit: cover;
+    width: 100%;
+    height: 40%;
+    position: absolute;
+    top: 60px;
+  }
+  .scrollable-area {
+    height: 300px; 
+    overflow-y: auto;
+  }
+  main {
+    height: 400px; 
+    overflow-y: auto;
+    display: flex;
+  }
+  .search-container {
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .search-container input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .search-container button[type="submit"] {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    /* margin: 20px auto; */
+  }
+  
+  .button-container button {
+    padding: 10px;
+    background-image: url(assets/etykieta.png);
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+  }
+
+  .products-list {
+    padding-top: 40px;
+    height: 60%; 
+    width: 100%;
+    overflow-y: auto;
+    border-radius: 10px;
+    border: none;
+  }
+  .search-bar {
+    border-radius: 10px;
+    margin-top: 3%;
+    /* background-image: url(assets/bagieta.png);
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; */
+  }
+  .search-bar-div{
+    background-image: url(assets/bagieta.png);
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    width: 80%;
+    padding-left: 15%;
+  }
+  body {
+    background-color: rgb(255, 255, 255);
+  }
+  /* .left-area {
+    background-color: #24a328;
+    border-radius: 40px;
+    padding: 0;
+    
+  } */
+  /* .right-area {
+    background-color: #24a328;
+    margin: 50px;
+    border-radius: 20px;
+    background-image: url(assets/deska.png);
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+  } */
+
+  .title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+  }
+  .subtext {
+    font-size: 12px;
+    color: #1cee00;
+    margin-top: 30px;
+    position: absolute;
+    text-align: center;
+  }
+  .subtext1{
+    font-size: 20px;
+    color: #00fff2;
+    margin-top: 180px;
+    margin-bottom: 0px;
+    position: absolute;
+    text-align: center;
+  }
+
+  .subtext2 {
+    font-size: 12px;
+    color: #f12323;
+    margin-top: 230px;
+    position: absolute;
+    text-align: center;
+
+  }
+  .underserach {
+    width: 80%;
+    height: 10%;
+  }
