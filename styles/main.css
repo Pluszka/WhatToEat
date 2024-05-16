@@ -24,11 +24,21 @@ body {
   width: 100vw;
   text-align: center;
   display: grid;
-  grid-template-columns: 1fr; }
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  background-image: url("./img/middleShelf.png");
+  background-repeat: repeat-y; }
   .shelf__image {
+    display: grid;
     grid-row-start: 1;
     grid-column-start: 1;
     width: 100dvw; }
+    .shelf__image:nth-child(2) {
+      grid-row-start: 2; }
+    .shelf__image:nth-child(3) {
+      grid-row-start: 3; }
+    .shelf__image:nth-child(4) {
+      grid-row-start: 5; }
   .shelf__container {
     display: flex;
     flex-direction: column;
@@ -39,6 +49,26 @@ body {
     width: auto;
     grid-row-start: 1;
     grid-column-start: 1; }
+  .shelf__button {
+    background: rgba(0, 0, 0, 0.4);
+    height: 3rem;
+    margin: 0.3rem;
+    border: none;
+    grid-template-rows: 1fr; }
+  .shelf__jar {
+    width: 2rem; }
+    .shelf__jar-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-row-end: 4;
+      grid-row-start: 1;
+      grid-column-start: 1;
+      align-items: end;
+      padding: 0 1rem; }
+    .shelf__jar text {
+      text-anchor: middle;
+      dominant-baseline: middle;
+      font-size: 5rem; }
 
 .topShelf {
   display: grid;
