@@ -1,11 +1,14 @@
+
 .shelf{
     width: 100vw;
     text-align: center;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    background-image: url("./img/middleShelf.png");
-    background-repeat: repeat-y;
+    grid-template-columns: 1fr 1fr 1fr;
+    &--middle{
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
     &__image{
         display: grid;
         grid-row-start: 1;
@@ -18,7 +21,7 @@
             grid-row-start: 3;
         }
         &:nth-child(4){
-            grid-row-start: 5;
+            grid-row-start: 4;
         }
     }
     &__container{
@@ -39,34 +42,35 @@
         height: 3rem;
         margin: 0.3rem;
         border:none;
-        grid-template-rows: 1fr;
+        z-index: 100;
+
+        scroll-snap-align: end;
     }
     &__jar{
         &-container{
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            grid-row-end: 4;
+            grid-template-rows: repeat(10, 25%);
+            overflow-y: scroll;
             grid-row-start: 1;
+            scroll-snap-type: y mandatory;
+            grid-row-end: -1;
             grid-column-start: 1;
             align-items: end;
             padding: 0 1rem;
         }
         width:2rem;
        
-        & text{
-    text-anchor: middle;
-    dominant-baseline: middle;
-    font-size: 5rem;
 
-        }
     }
 }
 .topShelf{
 
     display: grid;
     grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
     &__image{
-        grid-row-start: 1;
+        grid-row-start: 1 !important;
         grid-column-start: 1;
         width: 100vw;
         z-index: -100;
