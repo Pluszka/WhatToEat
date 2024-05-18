@@ -26,8 +26,9 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr; }
   .shelf--middle {
+    height: 80dvw;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr; }
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr; }
   .shelf__image {
     display: grid;
     grid-row-start: 1;
@@ -39,16 +40,33 @@ body {
       grid-row-start: 3; }
     .shelf__image:nth-child(4) {
       grid-row-start: 4; }
+    .shelf__image:nth-child(5) {
+      grid-row-start: 5; }
   .shelf__container {
     display: flex;
     flex-direction: column;
     width: 100vw; }
+    @media only screen and (min-width: 992px) {
+      .shelf__container {
+        width: 60vw; } }
   .shelf__baguette {
     align-self: end;
     margin: 0 2rem 0 2rem;
     width: auto;
     grid-row-start: 1;
-    grid-column-start: 1; }
+    grid-column-start: 1;
+    height: 2rem;
+    border: 1px solid black;
+    border-radius: 30px; }
+    @media only screen and (min-width: 768px) {
+      .shelf__baguette {
+        height: 3rem; } }
+    .shelf__baguette::placeholder {
+      text-align: center;
+      font-size: 1rem; }
+      @media only screen and (min-width: 768px) {
+        .shelf__baguette::placeholder {
+          font-size: 2rem; } }
   .shelf__button {
     background: rgba(0, 0, 0, 0.4);
     height: 3rem;
@@ -61,7 +79,7 @@ body {
     .shelf__jar-container {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: repeat(10, 25%);
+      grid-template-rows: repeat(100, 25dvw);
       overflow-y: scroll;
       grid-row-start: 1;
       scroll-snap-type: y mandatory;

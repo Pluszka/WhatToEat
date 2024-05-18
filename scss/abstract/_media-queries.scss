@@ -5,27 +5,27 @@ $large: 1200px;
 $x-large: 1400px;
 
 @mixin mobileQuerie {
-    @media (max-width: $x-small){
+    @media only screen and (min-width: $x-small){
         @content;
     }
 }
 @mixin tabletQuerie {
-    @media (max-width: $small){
+    @media only screen and (min-width: $small){
         @content;
     }
 }
 @mixin smallDesktopQuerie {
-    @media (max-width: $medium){
+    @media only screen and (min-width: $medium){
         @content;
     }
 }
 @mixin desktopQuerie {
-    @media (max-width: $large){
+    @media only screen and (min-width: $large){
         @content;
     }
 }
 @mixin bigDesktopQuerie {
-    @media (max-width: $x-large){
+    @media only screen and  (min-width: $x-large){
         @content;
     }
 }

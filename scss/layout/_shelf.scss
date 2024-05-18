@@ -5,9 +5,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     &--middle{
-
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+        height: 80dvw;
+         grid-template-columns: 1fr 1fr 1fr;
+         grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     }
     &__image{
         display: grid;
@@ -23,11 +23,17 @@
         &:nth-child(4){
             grid-row-start: 4;
         }
+        &:nth-child(5){
+            grid-row-start: 5;
+        }
     }
     &__container{
         display: flex;
         flex-direction: column;
         width: 100vw;    
+        @include smallDesktopQuerie{
+            width: 60vw;
+        }
     }
     &__baguette{
         align-self: end;
@@ -35,7 +41,23 @@
         width: auto;
         grid-row-start: 1;
         grid-column-start: 1;
+        height: 2rem;
+        border: 1px solid black;
+        border-radius: 30px;
+        @include tabletQuerie{
+            height: 3rem;
+        }
+        &::placeholder{
+            text-align: center;
+            font-size: 1rem;
+            @include tabletQuerie{
+                font-size: 2rem;
+            }
+        }
+        @include tabletQuerie{
+            // height: 8rem;
 
+        };
     }
     &__button{
         background: rgba(0,0,0,0.4);
@@ -50,7 +72,7 @@
         &-container{
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: repeat(10, 25%);
+            grid-template-rows: repeat(100, 25dvw);
             overflow-y: scroll;
             grid-row-start: 1;
             scroll-snap-type: y mandatory;
@@ -60,8 +82,6 @@
             padding: 0 1rem;
         }
         width:2rem;
-       
-
     }
 }
 .topShelf{
