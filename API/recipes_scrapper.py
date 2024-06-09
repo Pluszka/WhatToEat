@@ -1,5 +1,6 @@
 import requests
 import re
+from bson import ObjectId
 from morfeusz2 import Morfeusz
 from bs4 import BeautifulSoup
 
@@ -27,6 +28,7 @@ class RecipesScrapper:
             soup = BeautifulSoup(str(recipie), 'html.parser')
             recipie_url = soup.find('a')['href']
             record = {
+                "_id": str(ObjectId()),
                 "website_URL": recipie_url,
                 "rating": [],
                 "main_img_URL": soup.find('img')['src'],
