@@ -6,7 +6,6 @@ import json
 
 rs = RecipesScrapper()
 db_manager = DbManager()
-# db_manager.update_recipies(rs.getBlogRecipies())
 app = Flask(__name__)
 app.config['JSON_AS_ASCII'] = False
 api = Api(app)
@@ -17,6 +16,10 @@ class Recipies(Resource):
         response = make_response(encoded_data)
         response.headers['Content-Type'] = 'application/json'
         return response
+
+    def post(self):
+        db_manager.update_recipies(rs.getBlogRecipies())
+        return {'message': 'Database updated successfully'}, 201
 
 api.add_resource(Recipies, "/recipies")
 
