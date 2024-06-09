@@ -15,4 +15,9 @@ class DbManager:
                                                                      "/?retryWrites=true&w=majority&appName"
                                                                      "=ProgramingProjectCluster")
         self.db = self.client.get_database("what_to_eat_app_db")
-        self.records = self.db.recipies
+        self.collection = self.db.recipies
+
+    def update_recipies(self, new_recipies):
+        self.collection.delete_many({})
+        self.collection.insert_many(new_recipies)
+        return new_recipies
