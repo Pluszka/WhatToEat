@@ -6,9 +6,13 @@ from bs4 import BeautifulSoup
 RECIPIE_SOURCE_URL = "https://www.kwestiasmaku.com/home-przepisy?page=4"
 RECIPIE_BASE_URL = "https://www.kwestiasmaku.com"
 
+
 class RecipesScrapper:
     def __init__(self):
-        self.__getRecipieDetails()
+        self.__blog_recipies = self.__getRecipieDetails()
+
+    def getBlogRecipies(self):
+        return self.__blog_recipies
 
     def __getRecipes(self):
         response = requests.get(RECIPIE_SOURCE_URL)
@@ -18,6 +22,7 @@ class RecipesScrapper:
 
     def __getRecipieDetails(self):
         recipes = self.__getRecipes()
+        all_recipies = [];
         for recipie in recipes:
             soup = BeautifulSoup(str(recipie), 'html.parser')
             recipie_url = soup.find('a')['href']
@@ -25,10 +30,11 @@ class RecipesScrapper:
                 "website_URL": recipie_url,
                 "rating": [],
                 "main_img_URL": soup.find('img')['src'],
-                "ingredients": self.__findIngredients(RECIPIE_BASE_URL+recipie_url),
+                "ingredients": self.__findIngredients(RECIPIE_BASE_URL + recipie_url),
                 "title": soup.find('span').get_text()
             }
-            print(record)
+            all_recipies.append(record);
+        return all_recipies;
 
     def __findIngredients(self, url):
         response = requests.get(url)
