@@ -8,15 +8,11 @@ RECIPIE_BASE_URL = "https://www.kwestiasmaku.com"
 
 class RecipesScrapper:
     def __init__(self):
-        recipe_source = RECIPIE_SOURCE_URL
-        recipie_base_url = RECIPIE_BASE_URL
         self.__getRecipieDetails()
-        # recipie_names = self.__getRecipieNames()
-
 
     def __getRecipes(self):
         response = requests.get(RECIPIE_SOURCE_URL)
-        website_list = response.text;
+        website_list = response.text
         soup = BeautifulSoup(website_list, 'html.parser')
         return soup.select('div.col-lg-3:has(> div.views-field)')
 
