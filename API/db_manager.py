@@ -21,3 +21,6 @@ class DbManager:
         self.collection.delete_many({})
         self.collection.insert_many(new_recipies)
         return new_recipies
+
+    def get_all(self):
+        return list(self.collection.find())
