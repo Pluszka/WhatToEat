@@ -24,3 +24,10 @@ class DbManager:
 
     def get_all(self):
         return list(self.collection.find())
+
+    def get_recipe_by_id(self, recipe_id):
+        return self.collection.find_one({"_id": recipe_id})
+
+    def update_rating_by_id(self,recipe_id, rating):
+        self.collection.update_one({"_id": recipe_id}, {'$push': {"rating": rating}})
+        return self.get_recipe_by_id(recipe_id)
