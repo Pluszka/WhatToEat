@@ -1,6 +1,6 @@
 from recipes_scrapper import RecipesScrapper
 from db_manager import DbManager
-from flask import Flask, make_response
+from flask import Flask, make_response, jsonify
 from flask_restful import Api, Resource, abort
 import json
 
@@ -22,10 +22,10 @@ def abort_if_incorrect_id(recipie_id):
 
 class Recipies(Resource):
     def get(self):
-        encoded_data = json.dumps(db_manager.get_all(), ensure_ascii=False)
-        response = make_response(encoded_data)
-        response.headers['Content-Type'] = 'application/json'
-        return response, 200
+        encoded_data = db_manager.get_all()
+        response = make_response(jsonify(encoded_data), 200)
+        response.headers['Content-Type'] = 'application/json; charset=utf-8'
+        return response
 
     def update(self):
         db_manager.update_recipies(rs.getBlogRecipies())
@@ -37,9 +37,9 @@ class Rating(Resource):
         abort_if_incorrect_rating_value(rating)
         abort_if_incorrect_id(recipie_id)
         encoded_data = db_manager.update_rating_by_id(recipie_id, rating)
-        response = make_response(encoded_data)
+        response = make_response(jsonify(encoded_data), 201)
         response.headers['Content-Type'] = 'application/json; charset=utf-8'
-        return encoded_data, 201
+        return encoded_data
 
 
 api.add_resource(Recipies, "/recipies")
