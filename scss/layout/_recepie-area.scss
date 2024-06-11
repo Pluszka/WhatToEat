@@ -1,0 +1,13 @@
+.recepies-area{
+    @include tabletQuerie{
+        height: 100dvh;
+        grid-template-columns: repeat(3, 20vw);
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+        display: grid;
+    }
+    @include smallDesktopQuerie{
+        grid-template-columns: repeat(5, 13.6vw);
+       
+    }
+}

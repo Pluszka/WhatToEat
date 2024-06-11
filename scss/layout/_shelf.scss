@@ -1,112 +1,137 @@
+.shelf {
+  width: inherit;
+  height: auto;
+  text-align: center;
+  display: grid;
 
-.shelf{
-    width: 100vw;
-    text-align: center;
-    display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  @include tabletQuerie {
+    width: 40vw;
+  }
+  @include smallDesktopQuerie{
+    width: 30vw;
+  }
+  &--middle {
     grid-template-columns: 1fr 1fr 1fr;
-    &--middle{
-        height: 80dvw;
-         grid-template-columns: 1fr 1fr 1fr;
-         grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(5, 25dvw);
+    @include tabletQuerie {
+      grid-template-rows: repeat(5, 9.92dvw) ;
     }
-    &__image{
-        display: grid;
-        grid-row-start: 1;
-        grid-column-start: 1;
-        width: 100dvw;
-        &:nth-child(2){
-            grid-row-start: 2;
-        }
-        &:nth-child(3){
-            grid-row-start: 3;
-        }
-        &:nth-child(4){
-            grid-row-start: 4;
-        }
-        &:nth-child(5){
-            grid-row-start: 5;
-        }
+    @include smallDesktopQuerie{
+      grid-template-rows: repeat(5, 7.5dvw);
     }
-    &__container{
-        display: flex;
-        flex-direction: column;
-        width: 100vw;    
-        @include smallDesktopQuerie{
-            width: 60vw;
-        }
-    }
-    &__baguette{
-        align-self: end;
-        margin: 0 2rem 0 2rem;
-        width: auto;
-        grid-row-start: 1;
-        grid-column-start: 1;
-        height: 2rem;
-        border: 1px solid black;
-        border-radius: 30px;
-        @include tabletQuerie{
-            height: 3rem;
-        }
-        &::placeholder{
-            text-align: center;
-            font-size: 1rem;
-            @include tabletQuerie{
-                font-size: 2rem;
-            }
-        }
-        @include tabletQuerie{
-            // height: 8rem;
-
-        };
-    }
-    &__button{
-        background: rgba(0,0,0,0.4);
-        height: 3rem;
-        margin: 0.3rem;
-        border:none;
-        z-index: 100;
-
-        scroll-snap-align: end;
-    }
-    &__jar{
-        &-container{
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: repeat(100, 25dvw);
-            overflow-y: scroll;
-            grid-row-start: 1;
-            scroll-snap-type: y mandatory;
-            grid-row-end: -1;
-            grid-column-start: 1;
-            align-items: end;
-            padding: 0 1rem;
-        }
-        width:2rem;
-    }
-}
-.topShelf{
-
+  }
+  &__image {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    &__image{
-        grid-row-start: 1 !important;
-        grid-column-start: 1;
-        width: 100vw;
-        z-index: -100;
+    grid-row-start: 1;
+    grid-column-start: 1;
+    width: inherit;
+    &--bottom {
+      @include tabletQuerie {
+        width: 40vw;
+      }
+      @include smallDesktopQuerie{
+        width: inherit;
+      }
+    }
+    &:nth-child(2) {
+      grid-row-start: 2;
+    }
+    &:nth-child(3) {
+      grid-row-start: 3;
+    }
+    &:nth-child(4) {
+      grid-row-start: 4;
+    }
+    &:nth-child(5) {
+      grid-row-start: 5;
+    }
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100%;
 
+  }
+  &__bottom-legs{
+    @include smallDesktopQuerie{
+      width: 30vw;
     }
-    &__heading{
-        grid-row-start: 1;
-        align-self: center;
-        grid-column-start: 1;;
-        margin: 0rem;
+  }
+  &__baguette {
+    align-self: end;
+    margin: 0 2rem 0 2rem;
+    width: auto;
+    grid-row-start: 1;
+    grid-column-start: 1;
+    height: 2rem;
+    border: 1px solid black;
+    border-radius: 30px;
+    @include smallDesktopQuerie{
+      height: 3rem;
     }
-    &__productCount{
-        align-self: end;
-        padding-bottom:1rem;
-        grid-row-start: 1;
-        grid-column-start: 1;
-        margin:0;
+    &::placeholder {
+      text-align: center;
+      font-size: 1rem;
+      @include tabletQuerie {
+      }
     }
+
+  }
+  &__button {
+    background: rgba(0, 0, 0, 0.4);
+    height: 3rem;
+    margin: 0.3rem;
+    border: none;
+    z-index: 100;
+    scroll-snap-align: end;
+  }
+
+  &__jar {
+    &-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: repeat(100, 25dvw 25dvw 25dvw 25dvw 25dvw);
+      overflow-y: scroll;
+      grid-row-start: 1;
+      scroll-snap-type: y mandatory;
+      grid-row-end: -1;
+      grid-column-start: 1;
+      align-items: end;
+      padding: 0 1rem;
+      @include tabletQuerie {
+        grid-template-rows: repeat(100, 20%);
+        padding: 0 5%;
+      }
+    }
+    width: 2rem;
+  }
+}
+.topShelf {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  @include tabletQuerie{
+    height: fit-content;
+  }
+  &__image {
+    grid-row-start: 1 !important;
+    grid-column-start: 1;
+    width: inherit;
+    z-index: -100;
+  }
+  &__heading {
+    grid-row-start: 1;
+    align-self: center;
+    grid-column-start: 1;
+    margin: 0rem;
+  }
+  &__productCount {
+    align-self: end;
+    padding-bottom: 1rem;
+    grid-row-start: 1;
+    grid-column-start: 1;
+    margin: 0;
+  }
 }

@@ -3,5 +3,24 @@
     &__column{
         display: flex;
         flex-direction: column;
+        &--tablet{
+            @include tabletQuerie{
+                display: flex;
+                flex-direction: column;
+                width: 60vw;
+
+            }
+
+        @include smallDesktopQuerie{
+            width: 70vw;
+        }
+        }
+        @include tabletQuerie{
+            flex-direction: row;
+        }
+    }
+    &__row{
+        flex-direction: row;
+
     }
 }

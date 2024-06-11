@@ -1,0 +1,59 @@
+.recepie {
+  width: 100%;
+  border-radius: 15px;
+  border: 1px solid rgb(60, 60, 60);
+  border-radius: 3px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 0.5fr 0.5fr;
+  text-align: center;
+  box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.3);
+  @include tabletQuerie{
+      grid-template-columns: 1fr ;
+      grid-template-rows: 1fr 0.5fr .5fr .5fr ;
+      height: 20vh;
+  }
+  @include smallDesktopQuerie{
+    height: fit-content;
+    grid-template-rows: 3fr 1fr .5fr .5fr;
+    
+  }
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0.5rem;
+    
+
+  }
+  &__image {
+    grid-row-start: 1;
+    grid-row-end: 4;
+    border-radius: 3px 3px 0 0;
+    width: 100%;
+    @include tabletQuerie{
+      grid-row-end: 1;
+      object-fit: cover;
+      height: 10vh;
+    }
+    @include smallDesktopQuerie{
+      width: 100%;
+      min-height: 100%;
+    }
+  }
+  &__inputSearch{
+    width: 100%;
+    @include tabletQuerie{
+        
+    }
+  }
+  &__link {
+    @include subTextFont;
+  }
+  &__ingredientsInfo {
+    @include subTextFont;
+  }
+  &__heading {
+    @include headingFont;
+    margin: 0.5rem 0;
+  }
+}
