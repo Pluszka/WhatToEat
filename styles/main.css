@@ -26,12 +26,12 @@ body {
       height: 3rem; } }
   .input::placeholder {
     color: black; }
-  .input--recepieSearch {
+  .input--recipeSearch {
     margin: 1rem 1rem 0 1rem;
     width: -webkit-fill-available;
     width: fill-available; }
 
-.recepie {
+.recipe {
   width: 100%;
   border-radius: 15px;
   border: 1px solid #3c3c3c;
@@ -42,41 +42,41 @@ body {
   text-align: center;
   box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.3); }
   @media only screen and (min-width: 768px) {
-    .recepie {
+    .recipe {
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 0.5fr .5fr .5fr;
       height: 20vh; } }
   @media only screen and (min-width: 992px) {
-    .recepie {
+    .recipe {
       height: fit-content;
       grid-template-rows: 3fr 1fr .5fr .5fr; } }
-  .recepie__container {
+  .recipe__container {
     display: grid;
     grid-template-columns: 1fr;
     padding: 0.5rem; }
-  .recepie__image {
+  .recipe__image {
     grid-row-start: 1;
     grid-row-end: 4;
     border-radius: 3px 3px 0 0;
     width: 100%; }
     @media only screen and (min-width: 768px) {
-      .recepie__image {
+      .recipe__image {
         grid-row-end: 1;
         object-fit: cover;
         height: 10vh; } }
     @media only screen and (min-width: 992px) {
-      .recepie__image {
+      .recipe__image {
         width: 100%;
         min-height: 100%; } }
-  .recepie__inputSearch {
+  .recipe__inputSearch {
     width: 100%; }
-  .recepie__link {
+  .recipe__link {
     font-size: 0.9rem;
     color: #616060; }
-  .recepie__ingredientsInfo {
+  .recipe__ingredientsInfo {
     font-size: 0.9rem;
     color: #616060; }
-  .recepie__heading {
+  .recipe__heading {
     font-size: 1.4rem;
     margin: 0.5rem 0; }
 
@@ -193,7 +193,7 @@ body {
     margin: 0; }
 
 @media only screen and (min-width: 768px) {
-  .recepies-area {
+  .recipes-area {
     height: 100dvh;
     grid-template-columns: repeat(3, 20vw);
     scroll-snap-type: y mandatory;
@@ -201,7 +201,7 @@ body {
     display: grid; } }
 
 @media only screen and (min-width: 992px) {
-  .recepies-area {
+  .recipes-area {
     grid-template-columns: repeat(5, 13.6vw); } }
 
 .flex-container {
