@@ -1,9 +1,28 @@
-@mixin subTextFont {
-        font-size: 0.9rem;
-        color: rgb(97, 96, 96);
-    
+@mixin oxygenFont {
+  font-family: "Oxygen", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
-@mixin headingFont{
-    font-size: 1.4rem;
-    
+@mixin alluraFont {
+  font-family: "Allura", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+@mixin subTextFont {
+  font-size: 0.9rem;
+  @include oxygenFont;
+  color: rgb(97, 96, 96);
+}
+@mixin headingFont {
+  font-size: 1.4rem;
+  @include oxygenFont;
+}
+@mixin titleFont{
+    @include alluraFont;
+    font-weight: 200;
+}
+@mixin standardFont{
+    @include oxygenFont();
+    font-size: 0.9rem;
+
 }

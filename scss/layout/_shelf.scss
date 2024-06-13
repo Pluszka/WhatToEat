@@ -18,7 +18,7 @@
       grid-template-rows: repeat(5, 9.92dvw) ;
     }
     @include smallDesktopQuerie{
-      grid-template-rows: repeat(5, 7.5dvw);
+      grid-template-rows: repeat(5, 7.2dvw);
     }
   }
   &__image {
@@ -52,6 +52,9 @@
     flex-direction: column;
     width: 100vw;
     height: 100%;
+    @include smallDesktopQuerie{
+      position: fixed;
+    }
 
   }
   &__bottom-legs{
@@ -74,18 +77,34 @@
     &::placeholder {
       text-align: center;
       font-size: 1rem;
-      @include tabletQuerie {
-      }
+
     }
 
   }
   &__button {
-    background: rgba(0, 0, 0, 0.4);
-    height: 3rem;
-    margin: 0.3rem;
+    background: transparent;
+    cursor: pointer;
+    margin: 0.1rem;
     border: none;
     z-index: 100;
+    padding: 0;
     scroll-snap-align: end;
+    display: grid;
+    align-items: center;
+  }
+  &__buttonText{
+    position: relative;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    padding:.1rem;
+
+  }
+  &__buttonImage{
+    height: 100%;
+    width: 100%;
+
+    grid-column-start: 1;
+    grid-row-start: 1;
   }
 
   &__jar {
@@ -99,7 +118,8 @@
       grid-row-end: -1;
       grid-column-start: 1;
       align-items: end;
-      padding: 0 1rem;
+      padding: 0 5%;
+
       @include tabletQuerie {
         grid-template-rows: repeat(100, 20%);
         padding: 0 5%;
@@ -124,11 +144,13 @@
   &__heading {
     grid-row-start: 1;
     align-self: center;
+    @include titleFont;
     grid-column-start: 1;
     margin: 0rem;
   }
   &__productCount {
     align-self: end;
+    @include standardFont;
     padding-bottom: 1rem;
     grid-row-start: 1;
     grid-column-start: 1;

@@ -3,11 +3,17 @@
   <head>
     <!--
    <link rel="stylesheet" href="style.css">
-
  -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allura&family=Oxygen&display=swap"
+      rel="stylesheet"
+    />
+
     <title>What to eat</title>
   </head>
 
@@ -15,9 +21,9 @@
     <div class="flex-container__column">
       <div class="shelf__container">
         <div class="topShelf shelf">
-          <h1 class="topShelf__heading">Pantry</h1>
+          <h1 class="topShelf__heading">Spiżarnia</h1>
           <div class="topShelf__productCount" id="product-count">
-            selected ingredients: 0
+            wybrane składniki: 0
           </div>
           <img
             class="shelf__image topShelf__image"
@@ -31,7 +37,7 @@
           <input
             class="input shelf__baguette"
             type="search"
-            placeholder="Search for ingredients..."
+            placeholder="Szukaj składników..."
           />
         </div>
         <div class="shelf shelf--middle">
@@ -45,373 +51,24 @@
             alt=""
           />
 
-          <div class="shelf__jar-container">
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
-            <button class="shelf__button">ingredient</button>
+          <div id="jarContainer" class="shelf__jar-container">
+            
           </div>
         </div>
         <img class="shelf__bottom-legs" src="./img/bottomShelf.png" />
       </div>
       <div class="flex-container__column--tablet">
-        <div>
+        <div class="recipe__inputContainer">
           <input
             class="input input--recipeSearch"
             type="search"
-            placeholder="Search for recipes..."
+            placeholder="Szukaj przepisów..."
           />
           <img class="recipe__inputSearch" src="./img/hangingShelf.png" />
         </div>
-        <div class="recipes-area">
-          <div class="recipe__container">
-            <div class="recipe">
-              <img class="recipe__image" src="img/burger.jpeg" />
-              <h5 class="recipe__heading">recipe 1</h5>
-              <div class="recipe__ingredientsInfo">
-                you have all ingredients
-              </div>
-              <div>
-                <a class="recipe__link" href="www.example.com"
-                  >link to website</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="recipe__container">
-            <div class="recipe">
-              <img class="recipe__image" src="img/burger.jpeg" />
-              <h5 class="recipe__heading">recipe 1</h5>
-              <div class="recipe__ingredientsInfo">
-                you have all ingredients
-              </div>
-              <div>
-                <a class="recipe__link" href="www.example.com"
-                  >link to website</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="recipe__container">
-            <div class="recipe">
-              <img class="recipe__image" src="img/tortilla.jpg" />
-              <h5 class="recipe__heading">recipe 1</h5>
-              <div class="recipe__ingredientsInfo">
-                you have all ingredients
-              </div>
-              <div>
-                <a class="recipe__link" href="www.example.com"
-                  >link to website</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="recipe__container">
-            <div class="recipe">
-              <img class="recipe__image" src="img/tortilla.jpg" />
-              <h5 class="recipe__heading">recipe 1</h5>
-              <div class="recipe__ingredientsInfo">
-                you have all ingredients
-              </div>
-              <div>
-                <a class="recipe__link" href="www.example.com"
-                  >link to website</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="recipe__container">
-            <div class="recipe">
-              <img class="recipe__image" src="img/tortilla.jpg" />
-              <h5 class="recipe__heading">recipe 1</h5>
-              <div class="recipe__ingredientsInfo">
-                you have all ingredients
-              </div>
-              <div>
-                <a class="recipe__link" href="www.example.com"
-                  >link to website</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="recipe__container">
-            <div class="recipe">
-              <img class="recipe__image" src="img/tortilla.jpg" />
-              <h5 class="recipe__heading">recipe 1</h5>
-              <div class="recipe__ingredientsInfo">
-                you have all ingredients
-              </div>
-              <div>
-                <a class="recipe__link" href="www.example.com"
-                  >link to website</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="recipe__container">
-            <div class="recipe">
-              <img class="recipe__image" src="img/tortilla.jpg" />
-              <h5 class="recipe__heading">recipe 1</h5>
-              <div class="recipe__ingredientsInfo">
-                you have all ingredients
-              </div>
-              <div>
-                <a class="recipe__link" href="www.example.com"
-                  >link to website</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="recipe__container">
-            <div class="recipe">
-              <img class="recipe__image" src="img/tortilla.jpg" />
-              <h5 class="recipe__heading">recipe 1</h5>
-              <div class="recipe__ingredientsInfo">
-                you have all ingredients
-              </div>
-              <div>
-                <a class="recipe__link" href="www.example.com"
-                  >link to website</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="recipe__container">
-            <div class="recipe">
-              <img class="recipe__image" src="img/tortilla.jpg" />
-              <h5 class="recipe__heading">recipe 1</h5>
-              <div class="recipe__ingredientsInfo">
-                you have all ingredients
-              </div>
-              <div>
-                <a class="recipe__link" href="www.example.com"
-                  >link to website</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="recipe__container">
-            <div class="recipe">
-              <img class="recipe__image" src="img/tortilla.jpg" />
-              <h5 class="recipe__heading">recipe 1</h5>
-              <div class="recipe__ingredientsInfo">
-                you have all ingredients
-              </div>
-              <div>
-                <a class="recipe__link" href="www.example.com"
-                  >link to website</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="recipe__container">
-            <div class="recipe">
-              <img class="recipe__image" src="img/tortilla.jpg" />
-              <h5 class="recipe__heading">recipe 1</h5>
-              <div class="recipe__ingredientsInfo">
-                you have all ingredients
-              </div>
-              <div>
-                <a class="recipe__link" href="www.example.com"
-                  >link to website</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="recipe__container">
-            <div class="recipe">
-              <img class="recipe__image" src="img/tortilla.jpg" />
-              <h5 class="recipe__heading">recipe 1</h5>
-              <div class="recipe__ingredientsInfo">
-                you have all ingredients
-              </div>
-              <div>
-                <a class="recipe__link" href="www.example.com"
-                  >link to website</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="recipe__container">
-            <div class="recipe">
-              <img class="recipe__image" src="img/tortilla.jpg" />
-              <h5 class="recipe__heading">recipe 1</h5>
-              <div class="recipe__ingredientsInfo">
-                you have all ingredients
-              </div>
-              <div>
-                <a class="recipe__link" href="www.example.com"
-                  >link to website</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="recipe__container">
-            <div class="recipe">
-              <img class="recipe__image" src="img/tortilla.jpg" />
-              <h5 class="recipe__heading">recipe 1</h5>
-              <div class="recipe__ingredientsInfo">
-                you have all ingredients
-              </div>
-              <div>
-                <a class="recipe__link" href="www.example.com"
-                  >link to website</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="recipe__container">
-            <div class="recipe">
-              <img class="recipe__image" src="img/tortilla.jpg" />
-              <h5 class="recipe__heading">recipe 1</h5>
-              <div class="recipe__ingredientsInfo">
-                you have all ingredients
-              </div>
-              <div>
-                <a class="recipe__link" href="www.example.com"
-                  >link to website</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="recipe__container">
-            <div class="recipe">
-              <img class="recipe__image" src="img/tortilla.jpg" />
-              <h5 class="recipe__heading">recipe 1</h5>
-              <div class="recipe__ingredientsInfo">
-                you have all ingredients
-              </div>
-              <div>
-                <a class="recipe__link" href="www.example.com"
-                  >link to website</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="recipe__container">
-            <div class="recipe">
-              <img class="recipe__image" src="img/tortilla.jpg" />
-              <h5 class="recipe__heading">recipe 1</h5>
-              <div class="recipe__ingredientsInfo">
-                you have all ingredients
-              </div>
-              <div>
-                <a class="recipe__link" href="www.example.com"
-                  >link to website</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="recipe__container">
-            <div class="recipe">
-              <img class="recipe__image" src="img/tortilla.jpg" />
-              <h5 class="recipe__heading">recipe 1</h5>
-              <div class="recipe__ingredientsInfo">
-                you have all ingredients
-              </div>
-              <div>
-                <a class="recipe__link" href="www.example.com"
-                  >link to website</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="recipe__container">
-            <div class="recipe">
-              <img class="recipe__image" src="img/tortilla.jpg" />
-              <h5 class="recipe__heading">recipe 1</h5>
-              <div class="recipe__ingredientsInfo">
-                you have all ingredients
-              </div>
-              <div>
-                <a class="recipe__link" href="www.example.com"
-                  >link to website</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="recipe__container">
-            <div class="recipe">
-              <img class="recipe__image" src="img/tortilla.jpg" />
-              <h5 class="recipe__heading">recipe 1</h5>
-              <div class="recipe__ingredientsInfo">
-                you have all ingredients
-              </div>
-              <div>
-                <a class="recipe__link" href="www.example.com"
-                  >link to website</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="recipe__container">
-            <div class="recipe">
-              <img class="recipe__image" src="img/tortilla.jpg" />
-              <h5 class="recipe__heading">recipe 1</h5>
-              <div class="recipe__ingredientsInfo">
-                you have all ingredients
-              </div>
-              <div>
-                <a class="recipe__link" href="www.example.com"
-                  >link to website</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
+        <div id="fullRecipe" class="recipes-area"></div>
       </div>
     </div>
+    <script src="./script/main.js"></script>
   </body>
 </html>

@@ -7,7 +7,15 @@
         display: grid;
     }
     @include smallDesktopQuerie{
-        grid-template-columns: repeat(5, 13.6vw);
+        grid-template-columns: repeat(5, 13vw);
+        align-self: center;
+        grid-gap:.4rem;
        
+    }
+    @include smallDesktopQuerie{
+        background-position: center;
+        background-image: url(/img/plate.png);
+        background-repeat: no-repeat;
+        background-size: 70dvw 120dvh;
     }
 }

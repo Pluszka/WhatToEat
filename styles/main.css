@@ -36,9 +36,11 @@ body {
   border-radius: 15px;
   border: 1px solid #3c3c3c;
   border-radius: 3px;
+  margin: .5rem 0;
   display: grid;
+  background: rgba(255, 255, 255, 0.7);
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 0.5fr 0.5fr;
+  grid-template-rows: 2fr 0.2fr 0.2fr;
   text-align: center;
   box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.3); }
   @media only screen and (min-width: 768px) {
@@ -48,8 +50,8 @@ body {
       height: 20vh; } }
   @media only screen and (min-width: 992px) {
     .recipe {
-      height: fit-content;
-      grid-template-rows: 3fr 1fr .5fr .5fr; } }
+      height: 23rem;
+      grid-template-rows: 1.5fr .9fr .2fr .3fr; } }
   .recipe__container {
     display: grid;
     grid-template-columns: 1fr;
@@ -58,7 +60,8 @@ body {
     grid-row-start: 1;
     grid-row-end: 4;
     border-radius: 3px 3px 0 0;
-    width: 100%; }
+    width: 100%;
+    height: 100%; }
     @media only screen and (min-width: 768px) {
       .recipe__image {
         grid-row-end: 1;
@@ -70,15 +73,35 @@ body {
         min-height: 100%; } }
   .recipe__inputSearch {
     width: 100%; }
+    @media only screen and (min-width: 992px) {
+      .recipe__inputSearch {
+        width: 60%; } }
+  @media only screen and (min-width: 992px) {
+    .recipe__inputContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center; } }
   .recipe__link {
     font-size: 0.9rem;
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     color: #616060; }
   .recipe__ingredientsInfo {
     font-size: 0.9rem;
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     color: #616060; }
   .recipe__heading {
     font-size: 1.4rem;
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     margin: 0.5rem 0; }
+    @media only screen and (min-width: 992px) {
+      .recipe__heading {
+        padding: 0 .5rem; } }
 
 .shelf {
   width: inherit;
@@ -100,7 +123,7 @@ body {
         grid-template-rows: repeat(5, 9.92dvw); } }
     @media only screen and (min-width: 992px) {
       .shelf--middle {
-        grid-template-rows: repeat(5, 7.5dvw); } }
+        grid-template-rows: repeat(5, 7.2dvw); } }
   .shelf__image {
     display: grid;
     grid-row-start: 1;
@@ -125,6 +148,9 @@ body {
     flex-direction: column;
     width: 100vw;
     height: 100%; }
+    @media only screen and (min-width: 992px) {
+      .shelf__container {
+        position: fixed; } }
   @media only screen and (min-width: 992px) {
     .shelf__bottom-legs {
       width: 30vw; } }
@@ -144,12 +170,25 @@ body {
       text-align: center;
       font-size: 1rem; }
   .shelf__button {
-    background: rgba(0, 0, 0, 0.4);
-    height: 3rem;
-    margin: 0.3rem;
+    background: transparent;
+    cursor: pointer;
+    margin: 0.1rem;
     border: none;
     z-index: 100;
-    scroll-snap-align: end; }
+    padding: 0;
+    scroll-snap-align: end;
+    display: grid;
+    align-items: center; }
+  .shelf__buttonText {
+    position: relative;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    padding: .1rem; }
+  .shelf__buttonImage {
+    height: 100%;
+    width: 100%;
+    grid-column-start: 1;
+    grid-row-start: 1; }
   .shelf__jar {
     width: 2rem; }
     .shelf__jar-container {
@@ -162,7 +201,7 @@ body {
       grid-row-end: -1;
       grid-column-start: 1;
       align-items: end;
-      padding: 0 1rem; }
+      padding: 0 5%; }
       @media only screen and (min-width: 768px) {
         .shelf__jar-container {
           grid-template-rows: repeat(100, 20%);
@@ -183,10 +222,18 @@ body {
   .topShelf__heading {
     grid-row-start: 1;
     align-self: center;
+    font-family: "Allura", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-weight: 200;
     grid-column-start: 1;
     margin: 0rem; }
   .topShelf__productCount {
     align-self: end;
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.9rem;
     padding-bottom: 1rem;
     grid-row-start: 1;
     grid-column-start: 1;
@@ -202,13 +249,25 @@ body {
 
 @media only screen and (min-width: 992px) {
   .recipes-area {
-    grid-template-columns: repeat(5, 13.6vw); } }
+    grid-template-columns: repeat(5, 13vw);
+    align-self: center;
+    grid-gap: .4rem; } }
+
+@media only screen and (min-width: 992px) {
+  .recipes-area {
+    background-position: center;
+    background-image: url(/img/plate.png);
+    background-repeat: no-repeat;
+    background-size: 70dvw 120dvh; } }
 
 .flex-container {
   display: flex; }
   .flex-container__column {
     display: flex;
     flex-direction: column; }
+    @media only screen and (min-width: 992px) {
+      .flex-container__column {
+        max-height: 100vh; } }
     @media only screen and (min-width: 768px) {
       .flex-container__column--tablet {
         display: flex;
@@ -216,7 +275,11 @@ body {
         width: 60vw; } }
     @media only screen and (min-width: 992px) {
       .flex-container__column--tablet {
-        width: 70vw; } }
+        width: 70vw;
+        min-width: 70vw;
+        position: absolute;
+        right: 0;
+        max-height: 100dvh; } }
     @media only screen and (min-width: 768px) {
       .flex-container__column {
         flex-direction: row; } }
