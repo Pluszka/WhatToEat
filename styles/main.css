@@ -103,6 +103,20 @@ body {
       .recipe__heading {
         padding: 0 .5rem; } }
 
+.rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center; }
+  .rating__input {
+    display: none; }
+    .rating__input:checked ~ label {
+      color: orange; }
+  .rating__label {
+    font-size: 24px;
+    cursor: pointer; }
+    .rating__label:hover, .rating__label:hover ~ label {
+      color: orange; }
+
 .shelf {
   width: inherit;
   height: auto;

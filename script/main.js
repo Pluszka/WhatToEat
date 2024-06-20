@@ -14,6 +14,7 @@ getData(DATABASEURL).then((data) => {
   }
   document.getElementById("fullRecipe").appendChild(fullrecipesEl);
 });
+
 const createRecipe = (recipeObj) => {
   let root = document.createElement("div");
   root.classList.add("recipe");
@@ -36,6 +37,9 @@ const createRecipe = (recipeObj) => {
   ingredientsEl.classList.add("recipe__ingredientsInfo");
   ingredientsEl.textContent = "you have all ingredients";
   root.append(ingredientsEl);
+
+  const ratingEl = generateRatingButtons()
+  root.append(ratingEl)
 
   let linkContainerEl = document.createElement("div");
   let linkEl = document.createElement("a");
@@ -74,3 +78,33 @@ getData(INGREDIENTSDATABASEURL).then((data) => {
   }
   document.getElementById("jarContainer").appendChild(fullIngredientsEl);
 });
+function generateId() {
+       
+  return Math.random().toString(8).substring(2) +
+    (new Date()).getTime().toString(8);
+}
+
+const  generateRatingButtons = () =>{
+  const root = new DocumentFragment();
+  const containerEl = document.createElement("div")
+  root.append(containerEl);
+  containerEl.classList.add("rating");
+  for(let i = 0; i< 5; i++){
+    const uniqueId = generateId()
+
+    let inputEl = document.createElement("input")
+    inputEl.classList.add("rating__input")
+    inputEl.type = "radio"
+    inputEl.id = uniqueId;
+    inputEl.value = 5-i;
+    containerEl.append(inputEl)
+
+    let labelEl = document.createElement("label")
+    labelEl.classList.add("rating__label")
+    labelEl.htmlFor = uniqueId;
+    labelEl.textContent = "★";
+    containerEl.append(labelEl)
+
+  }
+  return(root)
+}
