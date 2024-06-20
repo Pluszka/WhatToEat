@@ -38,7 +38,7 @@ const createRecipe = (recipeObj) => {
   ingredientsEl.textContent = "you have all ingredients";
   root.append(ingredientsEl);
 
-  const ratingEl = generateRatingButtons()
+  const ratingEl = generateRatingButtons(recipeObj.rating)
   root.append(ratingEl)
 
   let linkContainerEl = document.createElement("div");
@@ -84,20 +84,34 @@ function generateId() {
     (new Date()).getTime().toString(8);
 }
 
-const  generateRatingButtons = () =>{
+const  generateRatingButtons = (ratingArr=[0,0]) =>{
+  let avarageRating;
+  if(ratingArr.length !== 0) {
+    avarageRating = Math.round((ratingArr.reduce((a,b)=> a+b)/ratingArr.length)/2)
+    
+  }else{
+    avarageRating = 0
+  }
+  console.log(avarageRating)
+
   const root = new DocumentFragment();
   const containerEl = document.createElement("div")
   root.append(containerEl);
   containerEl.classList.add("rating");
+  elementId = generateId()
   for(let i = 0; i< 5; i++){
     const uniqueId = generateId()
-
+    
     let inputEl = document.createElement("input")
     inputEl.classList.add("rating__input")
     inputEl.type = "radio"
     inputEl.id = uniqueId;
     inputEl.value = 5-i;
+    inputEl.name = "rating"+elementId
     containerEl.append(inputEl)
+    if(avarageRating === 5-i){
+      inputEl.checked = true;
+    }
 
     let labelEl = document.createElement("label")
     labelEl.classList.add("rating__label")
