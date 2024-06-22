@@ -2,11 +2,14 @@ from recipes_scrapper import RecipesScrapper
 from db_manager import DbManager
 from flask import Flask, make_response, jsonify
 from flask_restful import Api, Resource, abort
+from flask_cors import CORS
+
 import json
 
 rs = RecipesScrapper()
 db_manager = DbManager()
 app = Flask(__name__)
+CORS(app)
 app.config['JSON_AS_ASCII'] = False
 api = Api(app)
 
