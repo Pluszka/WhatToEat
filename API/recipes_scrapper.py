@@ -4,25 +4,38 @@ from bson import ObjectId
 from morfeusz2 import Morfeusz
 from bs4 import BeautifulSoup
 
-RECIPIE_SOURCE_URL = "https://www.kwestiasmaku.com/home-przepisy?page=4"
+RECIPIE_SOURCE_URL = "https://www.kwestiasmaku.com/home-przepisy?page=1"
 RECIPIE_BASE_URL = "https://www.kwestiasmaku.com"
 
 
 class RecipesScrapper:
     def __init__(self):
-        self.__blog_recipies = self.__getRecipieDetails()
+        self.__blog_recipies = self.__createDBContent()
+        self.recipie_source_url = RECIPIE_SOURCE_URL
 
     def getBlogRecipies(self):
         return self.__blog_recipies
 
+    def getBlogRecipiesMultiplePages(self, size):
+        recipies = []
+        for i in range(size):
+            recipies.extend(self.__createDBContent(++i))
+        return recipies
+
+    def __createDBContent(self, page=0):
+        self.recipie_source_url = RECIPIE_BASE_URL
+        if page != 0:
+            self.recipie_source_url = RECIPIE_BASE_URL + "/home-przepisy?page=" + str(page)
+        return self.__getRecipieDetails(self.__getRecipes())
+
+
     def __getRecipes(self):
-        response = requests.get(RECIPIE_SOURCE_URL)
+        response = requests.get(self.recipie_source_url)
         website_list = response.text
         soup = BeautifulSoup(website_list, 'html.parser')
         return soup.select('div.col-lg-3:has(> div.views-field)')
 
-    def __getRecipieDetails(self):
-        recipes = self.__getRecipes()
+    def __getRecipieDetails(self, recipes):
         all_recipies = [];
         for recipie in recipes:
             soup = BeautifulSoup(str(recipie), 'html.parser')

@@ -22,6 +22,10 @@ def abort_if_incorrect_id(recipie_id):
     if not db_manager.get_recipe_by_id(recipie_id):
         abort(404, message="Id" + recipie_id + " doesn't exist")
 
+def abort_if_incorrect_pages_amount(size):
+    if size < 0:
+        abort(400, message="Page amount is outside of scale")
+
 
 
 class Recipies(Resource):
@@ -33,8 +37,9 @@ class Recipies(Resource):
         return response
 
 
-    def update(self):
-        db_manager.update_recipies(rs.getBlogRecipies())
+    def post(self, size=1):
+        abort_if_incorrect_pages_amount(size)
+        db_manager.update_recipies(rs.getBlogRecipiesMultiplePages(size))
         return {'message': 'Database updated successfully'}, 201
 
 class Title(Resource):
@@ -61,6 +66,7 @@ class IngredientsAny(Resource):
         response = make_response(jsonify(encoded_data), 200)
         response.headers['Content-Type'] = 'application/json; charset=utf-8'
         return response
+
 class IngredientsAll(Resource):
     def get(self):
         ingredients_str = request.args.get('ingredients','')
@@ -80,7 +86,7 @@ class Rating(Resource):
         return encoded_data
 
 
-api.add_resource(Recipies, "/recipies")
+api.add_resource(Recipies, "/recipies", "/recipies/<int:size>")
 api.add_resource(Title, "/recipies/<string:title>")
 api.add_resource(IngredientsAny, "/recipies/any/ingredients")
 api.add_resource(IngredientsAll, "/recipies/all/ingredients")
