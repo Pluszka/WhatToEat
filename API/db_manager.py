@@ -1,5 +1,6 @@
 from pymongo import MongoClient
 import os
+from rapidfuzz import fuzz
 from dotenv import find_dotenv, load_dotenv
 
 DOTENV_PATH = find_dotenv()
@@ -27,6 +28,66 @@ class DbManager:
 
     def get_recipe_by_id(self, recipe_id):
         return self.collection.find_one({"_id": recipe_id})
+
+    def get_by_fuzzy_title(self, title, threshold=70):
+        all_titles = self.collection.find()
+        matching_titles = []
+        for item in all_titles:
+            if fuzz.partial_ratio(title.lower(), item['title'].lower()) >= threshold:
+                matching_titles.append(item)
+        return matching_titles
+
+    def get_recipie_without_ingredients(self, *ingredients, threshold=70):
+        all_recipes = list(self.collection.find())
+        matching_recipes = []
+        for recipe in all_recipes:
+            if 'ingredients' in recipe:
+                any_matching = not any(fuzz.partial_ratio(ingredient, recipe_ingredient) >= threshold
+                                   for ingredient in ingredients[0]
+                                   for recipe_ingredient in recipe['ingredients'])
+                if any_matching:
+                    matching_recipes.append(recipe)
+            for ingredient in ingredients[0]:
+                for recipe_ingredient in recipe['ingredients']:
+                        print(f"Similarity between '{ingredient}' and '{recipe_ingredient}': {fuzz.partial_ratio(ingredient, recipe_ingredient)}")
+
+        return matching_recipes
+
+    def get_recipes_by_any_ingredients(self, *ingredients, threshold=70):
+        all_recipes = list(self.collection.find())
+        matching_recipes = []
+        for recipe in all_recipes:
+            if 'ingredients' in recipe:
+                any_matching = any(fuzz.partial_ratio(ingredient, recipe_ingredient) >= threshold
+                                   for ingredient in ingredients[0]
+                                   for recipe_ingredient in recipe['ingredients'])
+                if any_matching:
+                    matching_recipes.append(recipe)
+            for ingredient in ingredients[0]:
+                for recipe_ingredient in recipe['ingredients']:
+                        print(f"Similarity between '{ingredient}' and '{recipe_ingredient}': {fuzz.partial_ratio(ingredient, recipe_ingredient)}")
+
+        return matching_recipes
+
+    def get_recipes_by_all_ingredients(self, ingredients, threshold=70):
+        all_recipes = list(self.collection.find())
+        matching_recipes = []
+
+        for recipe in all_recipes:
+            if 'ingredients' in recipe:
+                all_matching = all(
+                    any(fuzz.partial_ratio(ingredient, recipe_ingredient) >= threshold for recipe_ingredient in
+                        recipe['ingredients'])
+                    for ingredient in ingredients
+                )
+                if all_matching:
+                    matching_recipes.append(recipe)
+            for ingredient in ingredients:
+                for recipe_ingredient in recipe['ingredients']:
+                    print(
+                        f"Similarity between '{ingredient}' and '{recipe_ingredient}': {fuzz.partial_ratio(ingredient, recipe_ingredient)}")
+
+        return matching_recipes
 
     def update_rating_by_id(self,recipe_id, rating):
         self.collection.update_one({"_id": recipe_id}, {'$push': {"rating": rating}})
