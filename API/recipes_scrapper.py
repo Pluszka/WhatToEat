@@ -1,7 +1,6 @@
 import requests
 import re
 from bson import ObjectId
-from morfeusz2 import Morfeusz
 from bs4 import BeautifulSoup
 
 RECIPIE_SOURCE_URL = "https://www.kwestiasmaku.com/home-przepisy?page=1"
@@ -28,7 +27,6 @@ class RecipesScrapper:
             self.recipie_source_url = RECIPIE_BASE_URL + "/home-przepisy?page=" + str(page)
         return self.__getRecipieDetails(self.__getRecipes())
 
-
     def __getRecipes(self):
         response = requests.get(self.recipie_source_url)
         website_list = response.text
@@ -36,7 +34,7 @@ class RecipesScrapper:
         return soup.select('div.col-lg-3:has(> div.views-field)')
 
     def __getRecipieDetails(self, recipes):
-        all_recipies = [];
+        all_recipies = []
         for recipie in recipes:
             soup = BeautifulSoup(str(recipie), 'html.parser')
             recipie_url = soup.find('a')['href']
@@ -48,8 +46,8 @@ class RecipesScrapper:
                 "ingredients": self.__findIngredients(RECIPIE_BASE_URL + recipie_url),
                 "title": soup.find('span').get_text()
             }
-            all_recipies.append(record);
-        return all_recipies;
+            all_recipies.append(record)
+        return all_recipies
 
     def __findIngredients(self, url):
         response = requests.get(url)
@@ -65,12 +63,14 @@ class RecipesScrapper:
     def __extract_ingredients(self, all_ingredients):
         ingredients = []
         main_pattern = re.compile(
-            r'^(ok\.\s*)?\d+(\s+\d+/\d+)?\s*(szklanki?|łyżeczki?|łyżki?|gramy?|kg|ml|l|duże?|mały?|g|puszka?|puszki?|słoiczek?|słoik?|plasterki)?\s*|szczypta\s*')
+            r'^(ok\.\s*)?\d+(\s+\d+/\d+)?\s*(szklan'
+            r'ki?|łyżeczki?|łyżki?|gramy?|kg|ml|l|duże?'
+            r'|mały?|g|puszka?|puszki?|słoiczek?|słoik?|plasterki)?\s*|szczypta\s*')
         deko_pattern = re.compile(r'^do\s+dekoracji:\s*', re.IGNORECASE)
         parenthesis_pattern = re.compile(r'\(.*?\)')
         colon_pattern = re.compile(r'^.*?:')
         range_pattern = re.compile(r'\d+\s*-\s*\d+')
-        fraction_pattern = re.compile(r'\d+\s*\/\s*\d+')
+        fraction_pattern = re.compile(r'\d+\s*/\s*\d+')
         for item in all_ingredients:
             original_text = item.getText().strip()
             clean_item = range_pattern.sub('', original_text).strip()

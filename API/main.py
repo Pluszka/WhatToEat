@@ -18,14 +18,15 @@ def abort_if_incorrect_rating_value(rating):
     if rating < 1 or rating > 6:
         abort(400, message="Rating is outside of scale")
 
+
 def abort_if_incorrect_id(recipie_id):
     if not db_manager.get_recipe_by_id(recipie_id):
         abort(404, message="Id" + recipie_id + " doesn't exist")
 
+
 def abort_if_incorrect_pages_amount(size):
     if size < 0:
         abort(400, message="Page amount is outside of scale")
-
 
 
 class Recipies(Resource):
@@ -36,11 +37,11 @@ class Recipies(Resource):
         response.headers['Content-Type'] = 'application/json; charset=utf-8'
         return response
 
-
     def post(self, size=1):
         abort_if_incorrect_pages_amount(size)
         db_manager.update_recipies(rs.getBlogRecipiesMultiplePages(size))
         return {'message': 'Database updated successfully'}, 201
+
 
 class Title(Resource):
     def get(self, title):
@@ -49,32 +50,36 @@ class Title(Resource):
         response.headers['Content-Type'] = 'application/json; charset=utf-8'
         return response
 
+
 class IngredientsNone(Resource):
     def get(self):
-        ingredients_str = request.args.get('ingredients','')
+        ingredients_str = request.args.get('ingredients', '')
         ingredients = ingredients_str.split(',')
         encoded_data = db_manager.get_recipie_without_ingredients(ingredients)
         response = make_response(jsonify(encoded_data), 200)
         response.headers['Content-Type'] = 'application/json; charset=utf-8'
         return response
 
+
 class IngredientsAny(Resource):
     def get(self):
-        ingredients_str = request.args.get('ingredients','')
+        ingredients_str = request.args.get('ingredients', '')
         ingredients = ingredients_str.split(',')
         encoded_data = db_manager.get_recipes_by_any_ingredients(ingredients)
         response = make_response(jsonify(encoded_data), 200)
         response.headers['Content-Type'] = 'application/json; charset=utf-8'
         return response
 
+
 class IngredientsAll(Resource):
     def get(self):
-        ingredients_str = request.args.get('ingredients','')
+        ingredients_str = request.args.get('ingredients', '')
         ingredients = ingredients_str.split(',')
         encoded_data = db_manager.get_recipes_by_all_ingredients(ingredients)
         response = make_response(jsonify(encoded_data), 200)
         response.headers['Content-Type'] = 'application/json; charset=utf-8'
         return response
+
 
 class Rating(Resource):
     def post(self, recipie_id, rating):
