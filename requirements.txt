@@ -1,8 +1,9 @@
 beautifulsoup4==4.11.1
 Flask==1.1.2
 Flask==2.3.2
+Flask_Cors==4.0.1
 flask_restful==0.3.10
 pymongo==4.7.3
 python-dotenv==1.0.1
+rapidfuzz==3.9.3
 Requests==2.32.3
-flask-cors==4.0.1
