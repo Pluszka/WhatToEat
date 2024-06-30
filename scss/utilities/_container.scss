@@ -3,6 +3,9 @@
     &__column{
         display: flex;
         flex-direction: column;
+        @include smallDesktopQuerie{
+            max-height: 100vh;
+        }
         &--tablet{
             @include tabletQuerie{
                 display: flex;
@@ -13,6 +16,10 @@
 
         @include smallDesktopQuerie{
             width: 70vw;
+            min-width: 70vw;
+            position: absolute;
+            right:0;
+            max-height: 100dvh;
         }
         }
         @include tabletQuerie{

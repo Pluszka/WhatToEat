@@ -1,0 +1,901 @@
+[
+    {
+       "rating":[
+          10,
+          6,
+          4,
+          4,
+          7,
+          7,
+          7,
+          7,
+          7,
+          5,
+          5,
+          5
+       ],
+       "title":"Bigos z młodej kapusty",
+       "ingredients":[
+          "a główka młodej kapusty",
+          "oleju roślinnego",
+          "boczku parzonego lub podwędzanego",
+          "cebula",
+          "marchewka",
+          "kiełbasy wiejskiej",
+          "i  szklanki bulionu lub wody",
+          "istek laurowy",
+          "ziarnka ziela angielskiego",
+          "a koncentratu pomidorowego",
+          "masła",
+          "mąki",
+          "pół pęczka koperk"
+       ],
+       "main_img_URL":"https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/styles/kafelki/public/bigos-z-mlodej-kapusty-00.jpg?itok=84p-nTIt",
+       "_id":"6665cbde558831fb25bd570b",
+       "website_URL":"/przepis/bigos-z-mlodej-kapusty-z-kielbasa-boczkiem"
+    },
+    {
+      "rating":[
+         10,
+         1,
+         4,
+         1,
+         7,
+         7,
+         4,
+         7,
+         5,
+         5,
+         1,
+         5
+      ],
+       "title":"Tosty francuskie z truskawkami",
+       "ingredients":[
+          "kromek chałki",
+          "jajka",
+          "mleka",
+          "a cukr",
+          "masła",
+          "truskawki",
+          "kwaśnej gęstej śmietany 18%",
+          "a cukr",
+          "a cukru wanilinowego",
+          "cukier puder"
+       ],
+       "main_img_URL":"https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/styles/kafelki/public/tosty-francuskie-z-truskawkami-00.jpg?itok=FcGKs-zF",
+       "_id":"6665cbde558831fb25bd570c",
+       "website_URL":"/przepis/tosty-francuskie-z-truskawkami"
+    },
+    {
+      "rating":[
+         10
+      ],
+       "title":"Naleśniki stracciatella z truskawkami",
+       "ingredients":[
+          "mąki",
+          "mleka",
+          "jajka",
+          "cukr",
+          "mała soli",
+          "roztopionego masła lub olej",
+          "zmielonego twarog",
+          "gęstej kwaśnej śmietany 18%",
+          "a cukru wanilinowego",
+          "cukru pudr",
+          "tartej lub posiekanej czekolady",
+          "truskawek",
+          "cukier puder",
+          "bita śmietana"
+       ],
+       "main_img_URL":"https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/styles/kafelki/public/nalesniki-stracciatella-z-truskawkami-00.jpg?itok=qTkhAWNM",
+       "_id":"6665cbdf558831fb25bd570d",
+       "website_URL":"/przepis/nalesniki-stracciatella-z-truskawkami"
+    },
+    {
+       "rating":[
+          
+       ],
+       "title":"Ciasto maślankowe z truskawkami i kruszonką",
+       "ingredients":[
+          "truskawek",
+          "cukier puder",
+          "mąki pszennej",
+          "proszku do pieczenia",
+          "cukr",
+          "op. cukru wanilinowego",
+          "maślanki",
+          "oleju roślinnego",
+          "jajka",
+          "mąki pszennej",
+          "cukr",
+          "masła"
+       ],
+       "main_img_URL":"https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/styles/kafelki/public/ciasto-maslankowe-z-truskawkami-kruszonka-00.jpg?itok=9UJFt8UX",
+       "_id":"6665cbdf558831fb25bd570e",
+       "website_URL":"/przepis/ciasto-maslankowe-z-truskawkami-i-kruszonka"
+    },
+    {
+       "rating":[
+          
+       ],
+       "title":"Pieczone pulpeciki drobiowe z suszonymi pomidorami",
+       "ingredients":[
+          "mielonego mięsa kurczaka lub indyka",
+          "/3 szklanki bułki tartej",
+          "/3 szklanki mleka",
+          "kawałki suszonych pomidorów z olej",
+          "a czerwona cebula",
+          "ząbki czosnk",
+          "mały pęczek natki pietruszki",
+          "jajko",
+          "/4 szklanki tartego parmezan",
+          "suszonej szynki serrano",
+          "śmietanki 30%",
+          "duża garść szpinaku baby",
+          "makaron"
+       ],
+       "main_img_URL":"https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/styles/kafelki/public/pulpeciki-drobiowe-z-suszonymi-pomidorami-00_1.jpg?itok=lIqh670C",
+       "_id":"6665cbe0558831fb25bd570f",
+       "website_URL":"/przepis/pulpeciki-drobiowe-z-suszonymi-pomidorami"
+    },
+    {
+       "rating":[
+          
+       ],
+       "title":"Knedle serowe z truskawkami",
+       "ingredients":[
+          "truskawek",
+          "twarog",
+          "i  szklanki  mąki pszennej",
+          "jajka",
+          "mała soli",
+          "skrobi ziemniaczanej",
+          "bułki tartej",
+          "masła",
+          "a cukru trzcinowego lub białego",
+          "osłodzona śmietana"
+       ],
+       "main_img_URL":"https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/styles/kafelki/public/knedle-z-truskawkami-00.jpg?itok=NgYjZPgc",
+       "_id":"6665cbe0558831fb25bd5710",
+       "website_URL":"/przepis/knedle-serowe-z-truskawkami"
+    },
+    {
+       "rating":[
+          
+       ],
+       "title":"Kalafior z bułką tartą",
+       "ingredients":[
+          "kalafior",
+          "masła",
+          "bułki tartej",
+          "koperek"
+       ],
+       "main_img_URL":"https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/styles/kafelki/public/kalafior-z-bulka-tarta-00.jpg?itok=kj1oPDLk",
+       "_id":"6665cbe0558831fb25bd5711",
+       "website_URL":"/przepis/kalafior-z-bulka-tarta"
+    },
+    {
+       "rating":[
+          
+       ],
+       "title":"Zapiekanka makaronowa ze szparagami",
+       "ingredients":[
+          "makaronu kokardki",
+          "pęczek  szparagów",
+          "wędzonego łososia",
+          "pęczek koperk",
+          "pęczek szczypiork",
+          "masła",
+          "mąki pszennej",
+          "mleka",
+          "/3 łyżeczki tartej gałki muszkatołowej",
+          "tartego parmezanu lub grana padano"
+       ],
+       "main_img_URL":"https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/styles/kafelki/public/zapiekanka-makaronowa-ze-szparagami-00.jpg?itok=MOq7sI7L",
+       "_id":"6665cbe0558831fb25bd5712",
+       "website_URL":"/przepis/zapiekanka-makaronowa-ze-szparagami-i-lososiem-wedzonym"
+    },
+    {
+       "rating":[
+          
+       ],
+       "title":"Sałatka z arbuza z mini mozzarellą",
+       "ingredients":[
+          "rukoli",
+          "/4 arbuza",
+          "mini mozzarelli",
+          "łyżek pestek słonecznika",
+          "a miod",
+          "oliwy extra vergine",
+          "a soku z cytryny",
+          "sól i pieprz"
+       ],
+       "main_img_URL":"https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/styles/kafelki/public/salatka-arbuz-mozzarella-00.jpg?itok=_zgyLVpX",
+       "_id":"6665cbe0558831fb25bd5713",
+       "website_URL":"/przepis/salatka-z-arbuza-z-mini-mozzarella"
+    },
+    {
+       "rating":[
+          
+       ],
+       "title":"Sernik japoński na zimno",
+       "ingredients":[
+          "czekolady deserowej",
+          "masła",
+          "jajka",
+          "cukr",
+          "mąki pszennej",
+          "/2 łyżeczki proszku do pieczenia",
+          "/2 szklanki gorącej wody",
+          "żelatyny uniwersalnej",
+          "śmietanki 30%",
+          "łyżek cukru pudr",
+          "op. cukru wanilinowego",
+          "twarog",
+          "wody",
+          "alaretki o smaku truskawkowym",
+          "truskawek"
+       ],
+       "main_img_URL":"https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/styles/kafelki/public/sernik-japonski-na-zimno-00.jpg?itok=DhfIfyS9",
+       "_id":"6665cbe1558831fb25bd5714",
+       "website_URL":"/przepis/sernik-japonski-na-zimno"
+    },
+    {
+       "rating":[
+          
+       ],
+       "title":"Naleśniki z truskawkami, twarogiem i nutellą",
+       "ingredients":[
+          "mąki",
+          "mleka",
+          "jajka",
+          "cukr",
+          "mała soli",
+          "oleju lub roztopionego masła",
+          "twarog",
+          "śmietanki 30%",
+          "a cukru wanilinowego",
+          "cukru pudr",
+          "truskawek",
+          "łyżki nutelli",
+          "cukier puder"
+       ],
+       "main_img_URL":"https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/styles/kafelki/public/nalesniki-z-twarogiem-truskawkami-nutella-00.jpg?itok=sShG1U8F",
+       "_id":"6665cbe1558831fb25bd5715",
+       "website_URL":"/przepis/nalesniki-z-truskawkami-twarogiem-i-nutella"
+    },
+    {
+       "rating":[
+          
+       ],
+       "title":"Muffiny z truskawkami, twarogiem i kruszonką",
+       "ingredients":[
+          "i  szklanki pokrojonych w kosteczkę truskawek",
+          "/2 szklanki mąki",
+          "/4 szklanki cukr",
+          "odrobina soli",
+          "masła",
+          "twarog",
+          "a cukru wanilinowego",
+          "cukr",
+          "bardzo małe jajko",
+          "a skrobi ziemniaczanej",
+          "a mąki",
+          "a proszku do pieczenia",
+          "mała soli",
+          "jajko",
+          "/2 szklanki cukr",
+          "/4 szklanki zwykłej oliwy lub olej",
+          "/2 szklanki jogurtu naturalnego",
+          "a cukru wanilinowego"
+       ],
+       "main_img_URL":"https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/styles/kafelki/public/muffiny-z-truskawkami-twarogiem-kruszonka-00.jpg?itok=77UwjYwX",
+       "_id":"6665cbe1558831fb25bd5716",
+       "website_URL":"/przepis/muffiny-z-truskawkami-twarogiem-i-kruszonka"
+    },
+    {
+       "rating":[
+          
+       ],
+       "title":"Muffiny z borówkami amerykańskimi",
+       "ingredients":[
+          "a borówki amerykańskiej",
+          "i  szklanki mąki pszennej",
+          "proszku do pieczenia",
+          "soli morskiej",
+          "/3 szklanki cukr",
+          "/3 szklanki roztopionego masła lub oleju roślinnego",
+          "/2 szklanki mleka",
+          "jajko",
+          "wanilia"
+       ],
+       "main_img_URL":"https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/styles/kafelki/public/muffiny-z-borowkami-00.jpg?itok=sBlkwMwi",
+       "_id":"6665cbe1558831fb25bd5717",
+       "website_URL":"/przepis/muffiny-z-borowkami-amerykanskimi"
+    },
+    {
+       "rating":[
+          
+       ],
+       "title":"Filety drobiowe po greck",
+       "ingredients":[
+          "filetu kurczaka",
+          "a oregano",
+          "a wędzonej papryki",
+          "a czosnku granulowanego",
+          "zwykłej oliwy",
+          "sera feta",
+          "cytryna",
+          "oliwy extra",
+          "pęczek natki pietruszki"
+       ],
+       "main_img_URL":"https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/styles/kafelki/public/filety-drobiowe-po-grecku-00.jpg?itok=fydHPVXX",
+       "_id":"6665cbe1558831fb25bd5718",
+       "website_URL":"/przepis/filety-drobiowe-po-greck"
+    },
+    {
+       "rating":[
+          
+       ],
+       "title":"Ziemniaki gotowane i zapiekane w mundurkach",
+       "ingredients":[
+          "mniejszych ziemniaków z cienką skórką",
+          "sól, pieprz",
+          "zioła np. prowansalskie, oregano",
+          "oliwa extra lub roztopione masło",
+          "natka pietruszki"
+       ],
+       "main_img_URL":"https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/styles/kafelki/public/ziemniaki-gotowane-zapiekane-w-mundurkach-00.jpg?itok=TaUqdxYO",
+       "_id":"6665cbe2558831fb25bd5719",
+       "website_URL":"/przepis/mlode-ziemniaki-gotowane-i-zapiekane-w-mundurkach"
+    },
+    {
+       "rating":[
+          
+       ],
+       "title":"Schab gotowany w młodej kapuście",
+       "ingredients":[
+          "schab",
+          "mąki pszennej",
+          "olej",
+          "cebula",
+          "i  szklanki  bulion",
+          "siekanych pomidorów",
+          "/2 małej główki młodej kapusty",
+          "pęczek koperk"
+       ],
+       "main_img_URL":"https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/styles/kafelki/public/schab-gotowany-w-mlodej-kapuscie-00.jpg?itok=ZbXTdnBI",
+       "_id":"6665cbe2558831fb25bd571a",
+       "website_URL":"/przepis/schab-gotowany-w-mlodej-kapuscie"
+    },
+    {
+       "rating":[
+          
+       ],
+       "title":"Kurczak curry",
+       "ingredients":[
+          "podwójny filet z kurczaka",
+          "przyprawy curry",
+          "ząbki czosnk",
+          "a oliwy + do smażenia",
+          "a mąki pszennej",
+          "śmietanki 30%",
+          "ryżu 3 kolory",
+          "mieszanych mrożonych warzyw",
+          "natka pietruszki",
+          "limonka do skropienia"
+       ],
+       "main_img_URL":"https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/styles/kafelki/public/kurczak-curry-00.jpg?itok=io5SM7Vx",
+       "_id":"6665cbe2558831fb25bd571b",
+       "website_URL":"/przepis/kurczak-curry"
+    },
+    {
+       "rating":[
+          
+       ],
+       "title":"Makaron ze szparagami, suszoną szynką i sosem z gorgonzoli",
+       "ingredients":[
+          "makaronu kokardki",
+          "pęczek  szparagów",
+          "oliwy extra",
+          "szynki suszonej  lub cieniutko pokrojonego wędzonego boczk",
+          "ząbki czosnk",
+          "sera gorgonzola",
+          "mleka",
+          "a posiekanego koperku + do dekoracji",
+          "/3 szklanki tartego sera dojrzewającego"
+       ],
+       "main_img_URL":"https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/styles/kafelki/public/makaron-szparagi-szynka-gorgonzola-00.jpg?itok=EFFgTrnN",
+       "_id":"6665cbe2558831fb25bd571c",
+       "website_URL":"/przepis/makaron-ze-szparagami-i-gorgonzola"
+    },
+    {
+       "rating":[
+          
+       ],
+       "title":"Risotto ze szparagami i suszoną szynką",
+       "ingredients":[
+          "pęczek  szparagów",
+          "szynki suszonej np. serrano, parma",
+          "a i 1 łyżeczka oliwy",
+          "masła",
+          "/2 cebuli",
+          "ząbki czosnk",
+          "ryżu do risotto np. Arborio",
+          "białego wina",
+          "bulion",
+          "posiekanego koperku + do dekoracji",
+          "tartego sera dojrzewającego, twardego"
+       ],
+       "main_img_URL":"https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/styles/kafelki/public/risotto-szparagi-suszona-szynka-00.jpg?itok=QypgwYRd",
+       "_id":"6665cbe2558831fb25bd571d",
+       "website_URL":"/przepis/risotto-ze-szparagami-i-szynka-dojrzewajaca"
+    },
+    {
+       "rating":[
+          
+       ],
+       "title":"Szparagi z jajkami i tartym parmezanem",
+       "ingredients":[
+          "jajka ugotowane na średnio twardo",
+          "szparagów",
+          "sól i świeżo zmielony pieprz",
+          "a oliwy extra vergine",
+          "posiekana bazylia",
+          "tartego sera dojrzewającego np. grana padano lub parmezan",
+          "np. ciabatta"
+       ],
+       "main_img_URL":"https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/styles/kafelki/public/szparagi-z-jajkami-tartym-parmezanem-00.jpg?itok=o5CJWdfc",
+       "_id":"6665cbe3558831fb25bd571e",
+       "website_URL":"/przepis/szparagi-z-jajkami-i-tartym-serem-dojrzewajacym"
+    },
+    {
+       "rating":[
+          
+       ],
+       "title":"Wiosenna zupa Minestrone",
+       "ingredients":[
+          "oliwy extra",
+          "/2 cebuli",
+          "ząbki czosnk",
+          "młode ziemniaki",
+          "itry bulion",
+          "listek laurowy i 2 ziela angielskie",
+          "drobnego makaronu np. \\\"kolanka\\\"",
+          "białej fasolki",
+          "poszatkowanej młodej, zielonej kapusty",
+          "/3 brokuła",
+          "/2 mniejszej cukinii",
+          "zielonych szparagów lub szklanka pokrojonej zielonej fasolki",
+          "posiakana bazylia",
+          "drobno startego parmezanu lub grana padano",
+          "płatków chili"
+       ],
+       "main_img_URL":"https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/styles/kafelki/public/wiosenna-zupa-minestrone-00_0.jpg?itok=NIoITHvG",
+       "_id":"6665cbe3558831fb25bd571f",
+       "website_URL":"/przepis/wiosenna-zupa-minestrone"
+    },
+    {
+       "rating":[
+          
+       ],
+       "title":"Makaron ze szparagami",
+       "ingredients":[
+          "pęczek szparagów",
+          "makaronu spaghetti",
+          "ząbki czosnk",
+          "oliwy extra + do podania",
+          "kilka kropli soku z cytryny",
+          "pęczek natki pietruszki",
+          "tartego parmezanu lub grana padano + do podania"
+       ],
+       "main_img_URL":"https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/styles/kafelki/public/makaron-ze-szparagami-00.jpg?itok=Xy-32cW-",
+       "_id":"6665cbe3558831fb25bd5720",
+       "website_URL":"/przepis/makaron-ze-szparagami"
+    },
+    {
+       "rating":[
+          
+       ],
+       "title":"Faszerowany kurczak Buffalo",
+       "ingredients":[
+          "filetu kurczaka",
+          "sól i pieprz",
+          "serka kremowego np. Almette, Twój Smak",
+          "/2 szklanki startego sera cheddar",
+          "a przyprawy meksykańskiej*",
+          "a oliwy",
+          "a ketchup",
+          "a masła",
+          "/2 łyżeczki ostrego sosu np. sriracha",
+          "a majonez",
+          "natki pietruszki lub kolendra"
+       ],
+       "main_img_URL":"https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/styles/kafelki/public/faszerowany-kurczak-buffalo-00.jpg?itok=UORCL5CV",
+       "_id":"6665cbe3558831fb25bd5721",
+       "website_URL":"/przepis/faszerowany-kurczak-buffalo"
+    },
+    {
+       "rating":[
+          
+       ],
+       "title":"Meksykańska sałatka z nachosami",
+       "ingredients":[
+          "mięsa mielonego wołowego",
+          "a oliwy",
+          "ząbek czosnk",
+          "po 1 łyżeczce mielonej papryki i kuminu, po szczypcie cynamonu, ostrej papryki i oregano",
+          "/2 szklanki bulionu lub wody",
+          "passaty pomidorowej",
+          "awokado",
+          "/2 ząbka czosnk",
+          "a soku z limonki",
+          "chipsów kukurydzianych z tortilli",
+          "sera cheddar",
+          "marynowane jalapeño",
+          "kukurydzy z puszki",
+          "pomidor malinowy lub zwykły",
+          "kawałek czerwonej cebuli",
+          "kolendra lub natka"
+       ],
+       "main_img_URL":"https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/styles/kafelki/public/meksykanska-salatka-z-nachosami-00.jpg?itok=4Y8ZlxRN",
+       "_id":"6665cbe3558831fb25bd5722",
+       "website_URL":"/przepis/meksykanska-salatka-z-nachosami"
+    },
+    {
+       "rating":[
+          
+       ],
+       "title":"Crumble z rabarbarem, jabłkami i płatkami owsianymi",
+       "ingredients":[
+          "rabarbar",
+          "jabłka",
+          "łyżek cukru trzcinowego",
+          "a cynamon",
+          "sok z 1 limonki lub cytryny",
+          "mąki pszennej",
+          "płatków owsianych",
+          "łyżek roztopionego masła",
+          "łyżek miodu lub syropu klonowego",
+          "mała soli"
+       ],
+       "main_img_URL":"https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/styles/kafelki/public/crumble-z-rabarbarem-00_0.jpg?itok=8RZbG0Fv",
+       "_id":"6665cbe4558831fb25bd5723",
+       "website_URL":"/przepis/crumble-z-rabarbarem-jablkami-i-platkami-owsianymi"
+    },
+    {
+       "rating":[
+          
+       ],
+       "title":"Zapiekanka z halibutem, makaronem i sosem mornay",
+       "ingredients":[
+          "makaronu kolanka",
+          "filetu z halibuta",
+          "różyczek kalafiora",
+          "masła",
+          "mąki pszennej",
+          "mleka",
+          "gałka muszkatołowa",
+          "sera gruyère",
+          "żółtko",
+          "dużych kaparów z zalewy*",
+          "oliwy extra vergine",
+          "posiekanej natki pietruszki",
+          "ząbek czosnk",
+          "sok z  cytryny"
+       ],
+       "main_img_URL":"https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/styles/kafelki/public/zapiekanka-z-halibutem-kalafiorem-00.jpg?itok=fANtUrIF",
+       "_id":"6665cbe5558831fb25bd5724",
+       "website_URL":"/przepis/zapiekanka-z-halibutem-makaronem-i-sosem-mornay"
+    },
+    {
+       "rating":[
+          
+       ],
+       "title":"Risotto Primavera",
+       "ingredients":[
+          "ryżu do risotto np. Arborio",
+          "białego wina",
+          "bulion",
+          "szparagów lub 150 g fasolki szparagowej",
+          "marchewka",
+          "a cukinia",
+          "nieduża cebula",
+          "ząbki czosnk",
+          "pomidor",
+          "oliwy extra",
+          "masła lub masła roślinnego",
+          "a suszonego oregano",
+          "a posiekanego szczypiork",
+          "posiekanej bazylii",
+          "tartego parmezanu lub grana padano lub wegańskiego*"
+       ],
+       "main_img_URL":"https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/styles/kafelki/public/risotto-primavera-00.jpg?itok=0mJsqBE4",
+       "_id":"6665cbe5558831fb25bd5725",
+       "website_URL":"/przepis/risotto-primavera"
+    },
+    {
+       "rating":[
+          
+       ],
+       "title":"Nachosy zapiekane z mielonym mięsem i serem",
+       "ingredients":[
+          "mięsa mielonego wołowego",
+          "oliwy",
+          "ząbki czosnk",
+          "po 3 łyżeczki papryki słodkiej i kuminu, po  łyżeczki cynamonu, ostrej papryki i oregano",
+          "a bulionu lub wody",
+          "/2 szklanki passaty pomidorowej",
+          "awokado",
+          "/2 ząbka czosnk",
+          "a soku z limonki",
+          "a oliwy",
+          "/2 ząbka czosnk",
+          "/2 pomidora",
+          "/2 szklanki passaty pomidorowej",
+          "/4 czerwonej cebuli",
+          "chipsów kukurydzianych z tortilli",
+          "sera cheddar",
+          "papryczki jalapeño marynowane",
+          "jogurt",
+          "kolendra"
+       ],
+       "main_img_URL":"https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/styles/kafelki/public/nachos-00.jpg?itok=yN3WgGq7",
+       "_id":"6665cbe5558831fb25bd5726",
+       "website_URL":"/przepis/nachosy-zapiekane-z-mielonym-miesem-i-serem"
+    },
+    {
+       "rating":[
+          
+       ],
+       "title":"Czarny makaron z krewetkami",
+       "ingredients":[
+          "czarnego makaron",
+          "krewetek",
+          "oliwy extra",
+          "ząbki czosnk",
+          "sól, pieprz, oregano, ostra papryka",
+          "białego wina",
+          "passaty pomidorowej",
+          "posiekanej natki pietruszki",
+          "tartego parmezanu lub grana padano"
+       ],
+       "main_img_URL":"https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/styles/kafelki/public/czarny-makaron-z-krewetkami-00.jpg?itok=DSEJlrfZ",
+       "_id":"6665cbe5558831fb25bd5727",
+       "website_URL":"/przepis/czarny-makaron-z-krewetkami"
+    },
+    {
+       "rating":[
+          
+       ],
+       "title":"Ziemniaki pieczone na złoto",
+       "ingredients":[
+          "niedużych ziemniaków",
+          "sól i pieprz",
+          "/2 łyżeczki granulowanego czosnk",
+          "oliwy",
+          "słodka  mielona papryka",
+          "pęczek natki pietruszki",
+          "folia aluminiowa"
+       ],
+       "main_img_URL":"https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/styles/kafelki/public/ziemniaki-pieczone-na-zloto-00.jpg?itok=WMZluQ4-",
+       "_id":"6665cbe5558831fb25bd5728",
+       "website_URL":"/przepis/ziemniaki-pieczone-na-zloto"
+    },
+    {
+       "rating":[
+          
+       ],
+       "title":"Łosoś pieczony w czerwonym pesto",
+       "ingredients":[
+          "łososia",
+          "sól, pieprz",
+          "czerwonego pesto *",
+          "/2 puszki krojonych, obranych pomidorów **",
+          "suszonego oregano",
+          "oliwy extra",
+          "świeża bazylia",
+          "/2 szklanki tartego parmezan"
+       ],
+       "main_img_URL":"https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/styles/kafelki/public/losos-pieczony-w-czerwonym-pesto-00.jpg?itok=y0QM3O7F",
+       "_id":"6665cbe6558831fb25bd5729",
+       "website_URL":"/przepis/losos-pieczony-w-czerwonym-pesto"
+    },
+    {
+       "rating":[
+          
+       ],
+       "title":"Zapiekanka z kalafiorem, kurczakiem, ziemniakami i sosem serowym",
+       "ingredients":[
+          "filetów z kurczaka",
+          "/2 kalafiora",
+          "/2 szklanki zielonych oliwek bez pestek",
+          "/2 szklanki tartej żółtej mozzarelli",
+          "koperek",
+          "ząbek czosnk",
+          "a słodkiej papryki",
+          "a oliwy",
+          "masła",
+          "ząbek czosnk",
+          "sera gorgonzola",
+          "śmietanki kremowej 30%",
+          "po  łyżeczki mąki pszennej i ziemniaczanej",
+          "ziemniaki lub 150 g makaron"
+       ],
+       "main_img_URL":"https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/styles/kafelki/public/zapiekanka-kalafior-kurczak-00.jpg?itok=yj8CxlJC",
+       "_id":"6665cbe6558831fb25bd572a",
+       "website_URL":"/przepis/zapiekanka-z-kalafiorem-kurczakiem-ziemniakami-i-sosem-serowym"
+    },
+    {
+       "rating":[
+          
+       ],
+       "title":"Ryba z porami",
+       "ingredients":[
+          "filetów ryby",
+          "por",
+          "/3 łyżeczki nasion kopru włoskiego",
+          "a oliwy",
+          "masła",
+          "a posiekanego koperk",
+          "łyżek śmietanki 30%"
+       ],
+       "main_img_URL":"https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/styles/kafelki/public/ryba-z-porami-00.jpg?itok=R1UlbLwc",
+       "_id":"6665cbe6558831fb25bd572b",
+       "website_URL":"/przepis/ryba-z-porami"
+    },
+    {
+       "rating":[
+          
+       ],
+       "title":"Sałatka z jajkami, buraczkami i fetą",
+       "ingredients":[
+          "jajek",
+          "buraczki",
+          "roszponka",
+          "sera favita, fety lub sałatkowego",
+          "awokado",
+          "rzeżucha lub koperek",
+          "majonez",
+          "a musztardy miodowej",
+          "a soku z cytryny",
+          "a syropu klonowego",
+          "a oliwy extra",
+          "a sera favita",
+          "sól, pieprz"
+       ],
+       "main_img_URL":"https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/styles/kafelki/public/salatka-z-jajkami-buraczkami-feta-00.jpg?itok=2AH65tLD",
+       "_id":"6665cbe7558831fb25bd572c",
+       "website_URL":"/przepis/salatka-z-jajkami-buraczkami-i-feta"
+    },
+    {
+       "rating":[
+          
+       ],
+       "title":"Mazurek Florentynka",
+       "ingredients":[
+          "mąki pszennej",
+          "soli",
+          "cukr",
+          "a cukru wanilinowego",
+          "masła w temp. pokojowej",
+          "żółtka",
+          "a zimnej wody",
+          "masła",
+          "cukr",
+          "miod",
+          "odrobina soli",
+          "płatków migdałowych",
+          "suszonych śliwek lub moreli",
+          "orzechów pekan lub włoskich",
+          "a śmietanki 30%"
+       ],
+       "main_img_URL":"https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/styles/kafelki/public/mazurek-florentynka-00.jpg?itok=yM-w55Ye",
+       "_id":"6665cbe7558831fb25bd572d",
+       "website_URL":"/przepis/mazurek-florentynka"
+    },
+    {
+       "rating":[
+          
+       ],
+       "title":"Sernik z białą czekoladą i galaretką truskawkową",
+       "ingredients":[
+          "herbatników petit beurre",
+          "masła",
+          "zmielonego twarogu sernikowego",
+          "cukr",
+          "skrobi ziemniaczanej",
+          "jajka",
+          "śmietanki 18% lub 30%",
+          "białej czekolady",
+          "mrożonych lub świeżych truskawek",
+          "alaretka o smaku truskawkowym",
+          "a wody"
+       ],
+       "main_img_URL":"https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/styles/kafelki/public/sernik-z-biala-czekolada-galaretka-truskwkowa-00.jpg?itok=3ceIR7Gf",
+       "_id":"6665cbe7558831fb25bd572e",
+       "website_URL":"/przepis/sernik-z-biala-czekolada-i-galaretka-truskawkowa"
+    },
+    {
+       "rating":[
+          
+       ],
+       "title":"Kanapeczki Biedroneczki",
+       "ingredients":[
+          "kromek bagietki",
+          "dowolnego zielonego pesto*",
+          "kulka mozzarelli",
+          "istków bazylii",
+          "pomidorki koktajlowe",
+          "oliwa",
+          "czarnuszka",
+          "czarne oliwki",
+          "biały sezam"
+       ],
+       "main_img_URL":"https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/styles/kafelki/public/kanapeczki-biedroneczki-00.jpg?itok=yaUdic_k",
+       "_id":"6665cbe7558831fb25bd572f",
+       "website_URL":"/przepis/kanapeczki-biedroneczki"
+    },
+    {
+       "rating":[
+          
+       ],
+       "title":"Tortilla z omletem, pomidorem i awokado",
+       "ingredients":[
+          "tortille",
+          "masła",
+          "awokado",
+          "pomidor",
+          "jajka",
+          "kilkanaście listków szpinaku sałatkowego",
+          "tartej żółtej mozzarelli"
+       ],
+       "main_img_URL":"https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/styles/kafelki/public/tortilla-z-omletem-pomidorem-awokado-00.jpg?itok=rfT2mus9",
+       "_id":"6665cbe7558831fb25bd5730",
+       "website_URL":"/przepis/tortilla-z-omletem-i-awokado"
+    },
+    {
+       "rating":[
+          
+       ],
+       "title":"Roladki z cukinii w sosie pomidorowym",
+       "ingredients":[
+          "cukinii",
+          "a oliwy extra",
+          "ricotty",
+          "parmezanu lub grana padano",
+          "jajko",
+          "kilka liści bazylii",
+          "tartej mozzarelli",
+          "a oliwy extra",
+          "ząbek czosnk",
+          "passaty pomidorowej",
+          "suszonego oregano",
+          "soli, pieprzu, chili, cukr",
+          "kilka liści bazylii"
+       ],
+       "main_img_URL":"https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/styles/kafelki/public/roladki-z-cukinii-w-sosie-pomidorowym-00.jpg?itok=_ND5389b",
+       "_id":"6665cbe8558831fb25bd5731",
+       "website_URL":"/przepis/roladki-z-cukinii-w-sosie-pomidorowym"
+    },
+    {
+       "rating":[
+          
+       ],
+       "title":"Sałatka ryżowa z tuńczykiem i jajkiem",
+       "ingredients":[
+          "jajek",
+          "ryż",
+          "i tuńczyka",
+          "ananasa z puszki",
+          "żółtego sera",
+          "ogórki kiszone",
+          "kukurydzy",
+          "majonez",
+          "rzeżucha lub szczypiorek"
+       ],
+       "main_img_URL":"https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/styles/kafelki/public/salatka-ryzowa-z-tunczykiem-jajkiem-00.jpg?itok=RtiY_ve0",
+       "_id":"6665cbe8558831fb25bd5732",
+       "website_URL":"/przepis/salatka-ryzowa-z-tunczykiem-jajkiem-i-kukurydza"
+    }
+ ]
