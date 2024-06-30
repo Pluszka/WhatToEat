@@ -35,9 +35,20 @@
        "website_URL":"/przepis/bigos-z-mlodej-kapusty-z-kielbasa-boczkiem"
     },
     {
-       "rating":[
-          
-       ],
+      "rating":[
+         10,
+         1,
+         4,
+         1,
+         7,
+         7,
+         4,
+         7,
+         5,
+         5,
+         1,
+         5
+      ],
        "title":"Tosty francuskie z truskawkami",
        "ingredients":[
           "kromek chałki",
@@ -56,9 +67,9 @@
        "website_URL":"/przepis/tosty-francuskie-z-truskawkami"
     },
     {
-       "rating":[
-          
-       ],
+      "rating":[
+         10
+      ],
        "title":"Naleśniki stracciatella z truskawkami",
        "ingredients":[
           "mąki",

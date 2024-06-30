@@ -34,6 +34,7 @@
     border-radius: 3px 3px 0 0;
     width: 100%;
     height: 100%;
+   
     @include tabletQuerie{
       grid-row-end: 1;
       object-fit: cover;

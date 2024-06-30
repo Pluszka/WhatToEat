@@ -10,7 +10,7 @@ getData(DATABASEURL).then((data) => {
   let fullrecipesEl = new DocumentFragment();
   for (let i = 0; i < data.length; i++) {
     const recipeEl = createRecipe(data[i]);
-    fullrecipesEl.append(recipeEl)
+    fullrecipesEl.append(recipeEl);
   }
   document.getElementById("fullRecipe").appendChild(fullrecipesEl);
 });
@@ -38,8 +38,8 @@ const createRecipe = (recipeObj) => {
   ingredientsEl.textContent = "you have all ingredients";
   root.append(ingredientsEl);
 
-  const ratingEl = generateRatingButtons(recipeObj.rating)
-  root.append(ratingEl)
+  const ratingEl = generateRatingButtons(recipeObj.rating);
+  root.append(ratingEl);
 
   let linkContainerEl = document.createElement("div");
   let linkEl = document.createElement("a");
@@ -60,65 +60,92 @@ const createIngredientEl = (ingredientName) => {
   imgEl.classList.add("shelf__buttonImage");
   imgEl.src = "./img/jar.svg";
   root.append(imgEl);
-  
-  let textEl = document.createElement("span");
-  textEl.classList.add("shelf__buttonText")
-  textEl.textContent = ingredientName
-  root.append(textEl)
-  return root
-}
 
+  let textEl = document.createElement("span");
+  textEl.classList.add("shelf__buttonText");
+  textEl.textContent = ingredientName;
+  root.append(textEl);
+  return root;
+};
 
 getData(INGREDIENTSDATABASEURL).then((data) => {
-  
   let fullIngredientsEl = new DocumentFragment();
   for (let i = 0; i < data.ingredients.length; i++) {
     const ingredientEl = createIngredientEl(data.ingredients[i]);
-    fullIngredientsEl.append(ingredientEl)
+    addIngredientHandler(ingredientEl);
+    fullIngredientsEl.append(ingredientEl);
   }
   document.getElementById("jarContainer").appendChild(fullIngredientsEl);
 });
 function generateId() {
-       
-  return Math.random().toString(8).substring(2) +
-    (new Date()).getTime().toString(8);
+  return (
+    Math.random().toString(8).substring(2) + new Date().getTime().toString(8)
+  );
 }
 
-const  generateRatingButtons = (ratingArr=[0,0]) =>{
+const generateRatingButtons = (ratingArr = [0, 0]) => {
   let avarageRating;
-  if(ratingArr.length !== 0) {
-    avarageRating = Math.round((ratingArr.reduce((a,b)=> a+b)/ratingArr.length)/2)
-    
-  }else{
-    avarageRating = 0
+  if (ratingArr.length !== 0) {
+    avarageRating = Math.round(
+      ratingArr.reduce((a, b) => a + b) / ratingArr.length / 2
+    );
+  } else {
+    avarageRating = 0;
   }
-  console.log(avarageRating)
+  console.log(avarageRating);
 
   const root = new DocumentFragment();
-  const containerEl = document.createElement("div")
+  const containerEl = document.createElement("div");
   root.append(containerEl);
   containerEl.classList.add("rating");
-  elementId = generateId()
-  for(let i = 0; i< 5; i++){
-    const uniqueId = generateId()
-    
-    let inputEl = document.createElement("input")
-    inputEl.classList.add("rating__input")
-    inputEl.type = "radio"
+  elementId = generateId();
+  for (let i = 0; i < 5; i++) {
+    const uniqueId = generateId();
+
+    let inputEl = document.createElement("input");
+    inputEl.classList.add("rating__input");
+    inputEl.type = "radio";
     inputEl.id = uniqueId;
-    inputEl.value = 5-i;
-    inputEl.name = "rating"+elementId
-    containerEl.append(inputEl)
-    if(avarageRating === 5-i){
+    inputEl.value = 5 - i;
+    inputEl.name = "rating" + elementId;
+    containerEl.append(inputEl);
+    if (avarageRating === 5 - i) {
       inputEl.checked = true;
     }
 
-    let labelEl = document.createElement("label")
-    labelEl.classList.add("rating__label")
+    let labelEl = document.createElement("label");
+    labelEl.classList.add("rating__label");
     labelEl.htmlFor = uniqueId;
     labelEl.textContent = "★";
-    containerEl.append(labelEl)
-
+    containerEl.append(labelEl);
   }
-  return(root)
-}
+  return root;
+};
+
+//ingredients selection
+
+const addIngredientHandler = (el) => {
+  el.addEventListener("click", (e) => {
+    let btnEl = e.target.parentNode;
+    if (
+      btnEl.dataset.selected == "false" ||
+      btnEl.dataset.selected === undefined
+    ) {
+      btnEl.dataset.selected = true;
+      btnEl.querySelector("img").src = "./img/jarSelected.svg";
+    } else {
+      btnEl.dataset.selected = false;
+      btnEl.querySelector("img").src = "./img/jar.svg";
+    }
+    toggleIngredient(btnEl.querySelector("span").textContent)
+    console.log(ingredientsSelected)
+  });
+};
+let ingredientsSelected = [];
+const toggleIngredient = (ingredient) => {
+  if (ingredientsSelected.includes(ingredient)) {
+    ingredientsSelected.splice(ingredientsSelected.indexOf(ingredient), 1);
+  } else {
+    ingredientsSelected.push(ingredient);
+  }
+};

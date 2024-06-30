@@ -118,6 +118,7 @@ body {
       color: orange; }
 
 .shelf {
+  z-index: -10;
   width: inherit;
   height: auto;
   text-align: center;
@@ -224,10 +225,24 @@ body {
 .topShelf {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr; }
+  grid-template-rows: 1fr;
+  z-index: 10; }
   @media only screen and (min-width: 768px) {
     .topShelf {
       height: fit-content; } }
+  .topShelf__background {
+    height: 30vw;
+    position: absolute;
+    justify-self: center;
+    z-index: -5;
+    grid-column-start: 1;
+    grid-row-start: 1; }
+    @media only screen and (min-width: 768px) {
+      .topShelf__background {
+        height: 12vw; } }
+    @media only screen and (min-width: 992px) {
+      .topShelf__background {
+        height: 9vw; } }
   .topShelf__image {
     grid-row-start: 1 !important;
     grid-column-start: 1;

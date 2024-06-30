@@ -19,7 +19,8 @@
 }
 @mixin titleFont{
     @include alluraFont;
-    font-weight: 200;
+
+    font-weight: bold;
 }
 @mixin standardFont{
     @include oxygenFont();

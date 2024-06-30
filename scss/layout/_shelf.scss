@@ -1,4 +1,5 @@
 .shelf {
+  z-index: -10;
   width: inherit;
   height: auto;
   text-align: center;
@@ -132,14 +133,30 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
+  z-index: 10;
   @include tabletQuerie{
     height: fit-content;
+  }
+  &__background{
+    height:30vw;
+    position: absolute;
+    justify-self: center;
+    z-index: -5;
+    grid-column-start:1;
+    grid-row-start:1;
+    @include tabletQuerie{
+      height: 12vw;
+    }
+    @include smallDesktopQuerie{
+      height: 9vw;
+    }
   }
   &__image {
     grid-row-start: 1 !important;
     grid-column-start: 1;
     width: inherit;
     z-index: -100;
+    
   }
   &__heading {
     grid-row-start: 1;
