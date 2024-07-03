@@ -16,21 +16,25 @@ class DbManager:
                                                                      "/?retryWrites=true&w=majority&appName"
                                                                      "=ProgramingProjectCluster")
         self.db = self.client.get_database("what_to_eat_app_db")
-        self.collection = self.db.recipies
+        self.collectionRecipies = self.db.recipies
+        self.collectionPopular = self.db.popular
 
     def update_recipies(self, new_recipies):
-        self.collection.delete_many({})
-        self.collection.insert_many(new_recipies)
+        self.collectionRecipies.delete_many({})
+        self.collectionRecipies.insert_many(new_recipies)
         return new_recipies
 
     def get_all(self):
-        return list(self.collection.find())
+        return list(self.collectionRecipies.find())
+
+    def get_popular(self):
+        return list(self.collectionPopular.find())
 
     def get_recipe_by_id(self, recipe_id):
-        return self.collection.find_one({"_id": recipe_id})
+        return self.collectionRecipies.find_one({"_id": recipe_id})
 
     def get_by_fuzzy_title(self, title, threshold=70):
-        all_titles = self.collection.find()
+        all_titles = self.collectionRecipies.find()
         matching_titles = []
         for item in all_titles:
             if fuzz.partial_ratio(title.lower(), item['title'].lower()) >= threshold:
@@ -38,7 +42,7 @@ class DbManager:
         return matching_titles
 
     def get_recipie_without_ingredients(self, *ingredients, threshold=70):
-        all_recipes = list(self.collection.find())
+        all_recipes = list(self.collectionRecipies.find())
         matching_recipes = []
         for recipe in all_recipes:
             if 'ingredients' in recipe:
@@ -54,7 +58,7 @@ class DbManager:
         return matching_recipes
 
     def get_recipes_by_any_ingredients(self, *ingredients, threshold=70):
-        all_recipes = list(self.collection.find())
+        all_recipes = list(self.collectionRecipies.find())
         matching_recipes = []
         for recipe in all_recipes:
             if 'ingredients' in recipe:
@@ -70,7 +74,7 @@ class DbManager:
         return matching_recipes
 
     def get_recipes_by_all_ingredients(self, ingredients, threshold=70):
-        all_recipes = list(self.collection.find())
+        all_recipes = list(self.collectionRecipies.find())
         matching_recipes = []
 
         for recipe in all_recipes:
@@ -90,5 +94,5 @@ class DbManager:
         return matching_recipes
 
     def update_rating_by_id(self,recipe_id, rating):
-        self.collection.update_one({"_id": recipe_id}, {'$push': {"rating": rating}})
+        self.collectionRecipies.update_one({"_id": recipe_id}, {'$push': {"rating": rating}})
         return self.get_recipe_by_id(recipe_id)
