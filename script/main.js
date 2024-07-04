@@ -1,19 +1,26 @@
-const DATABASEURL = "http://127.0.0.1:5500/database.json";
-const INGREDIENTSDATABASEURL = "http://127.0.0.1:5500/ingredientsDatabase.json";
+const DATABASEURL = "http://127.0.0.1:5000/recipies";
+const BASEDATABASEURL = "http://127.0.0.1:5000";
+const INGREDIENTSDATABASEURL = "http://127.0.0.1:5000/recipies/all/ingredients";
 
 const getData = async (databaseUrl) => {
+  
   let data = await fetch(databaseUrl);
   data = await data.json();
   return data;
 };
-getData(DATABASEURL).then((data) => {
-  let fullrecipesEl = new DocumentFragment();
-  for (let i = 0; i < data.length; i++) {
-    const recipeEl = createRecipe(data[i]);
-    fullrecipesEl.append(recipeEl);
-  }
-  document.getElementById("fullRecipe").appendChild(fullrecipesEl);
-});
+
+const updateRecipes = async (url) =>{
+  await getData(url).then((data) => {
+    let fullrecipesEl = new DocumentFragment();
+    for (let i = 0; i < data.length; i++) {
+      const recipeEl = createRecipe(data[i]);
+      fullrecipesEl.append(recipeEl);
+    }    
+    document.getElementById("fullRecipe").innerHTML = ""
+    document.getElementById("fullRecipe").appendChild(fullrecipesEl);
+  });
+}
+updateRecipes(DATABASEURL);
 
 const createRecipe = (recipeObj) => {
   let root = document.createElement("div");
@@ -92,7 +99,6 @@ const generateRatingButtons = (ratingArr = [0, 0]) => {
   } else {
     avarageRating = 0;
   }
-  console.log(avarageRating);
 
   const root = new DocumentFragment();
   const containerEl = document.createElement("div");
@@ -149,3 +155,14 @@ const toggleIngredient = (ingredient) => {
     ingredientsSelected.push(ingredient);
   }
 };
+
+const recipeInputEl = document.getElementById("recipeInput")
+recipeInputEl.addEventListener("input",()=>{
+  recipeSearchHandler(recipeInputEl.value)
+})
+const recipeSearchHandler = async (searchedTerm) => {
+  if(searchedTerm == ""){
+    updateRecipes(`${BASEDATABASEURL}/recipies`)
+  }
+  updateRecipes(`${BASEDATABASEURL}/recipies/${searchedTerm}`)
+} 

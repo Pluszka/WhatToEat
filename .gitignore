@@ -1,2 +1,4 @@
 .env
 node_modules
+API/__pycache__
+API/recipes_scrapper.pyc
