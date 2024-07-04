@@ -40,10 +40,6 @@ const createRecipe = (recipeObj) => {
   headingEl.textContent = recipeObj.title;
   root.append(headingEl);
 
-  let ingredientsEl = document.createElement("div");
-  ingredientsEl.classList.add("recipe__ingredientsInfo");
-  ingredientsEl.textContent = "you have all ingredients";
-  root.append(ingredientsEl);
 
   const ratingEl = generateRatingButtons(recipeObj.rating);
   root.append(ratingEl);
