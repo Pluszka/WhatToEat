@@ -1,8 +1,8 @@
 const DATABASEURL = "http://127.0.0.1:5000/recipies";
 const BASEDATABASEURL = "http://127.0.0.1:5000";
-const INGREDIENTSDATABASEURL = "/ingredientsDatabase.json";
-const SELECTINGREDNETSQUERY ="http://127.0.0.1:5000/recipies/with/ingredients?ingredients=";
-
+const INGREDIENTSDATABASEURL = "http://127.0.0.1:5000/recipies/ingredients/popular";
+const SELECTINGREDNETSQUERY ="http://127.0.0.1:5000/recipies/all/ingredients?ingredients=";
+const POSTRATINGURL = "http://127.0.0.1:5000/recipies/"
 const getData = async (databaseUrl) => {
   let data = await fetch(databaseUrl);
   data = await data.json();
@@ -40,7 +40,7 @@ const createRecipe = (recipeObj) => {
   headingEl.textContent = recipeObj.title;
   root.append(headingEl);
 
-  const ratingEl = generateRatingButtons(recipeObj.rating);
+  const ratingEl = generateRatingButtons(recipeObj.rating, recipeObj._id);
   root.append(ratingEl);
 
   let linkContainerEl = document.createElement("div");
@@ -74,12 +74,13 @@ const createIngredientEl = (ingredientName) => {
 
 const ingredientsHandler = (ingredientsList) => {
   {
+    
     let fullIngredientsEl = new DocumentFragment();
     for (let i = 0; i < ingredientsList.length; i++) {
-      const ingredientEl = createIngredientEl(ingredientsList[i]);
+      const ingredientEl = createIngredientEl(ingredientsList[i].title);
       addIngredientHandler(ingredientEl);
       ingredientsSelected.forEach((el) => {
-        if (el == ingredientsList[i]) {
+        if (el == ingredientsList[i].title) {
           toggleSelectionOnButton(ingredientEl);
         }
       });
@@ -92,19 +93,19 @@ const ingredientsHandler = (ingredientsList) => {
 let fullIngredientsList;
 getData(INGREDIENTSDATABASEURL).then((data) => {
   fullIngredientsList = data;
-  ingredientsHandler(data.ingredients);
+  console.log(data)
+  ingredientsHandler(data);
 });
-function generateId() {
-  return (
-    Math.random().toString(8).substring(2) + new Date().getTime().toString(8)
-  );
+const handleRatingClick = async (event) =>{
+  const id = event.target.name;
+  const rating = event.target.value;
+  await fetch(`${DATABASEURL}/${id}/${rating}`,{method: "POST"})
 }
-
-const generateRatingButtons = (ratingArr = [0, 0]) => {
+const generateRatingButtons = (ratingArr = [0, 0],ratingId) => {
   let avarageRating;
   if (ratingArr.length !== 0) {
     avarageRating = Math.round(
-      ratingArr.reduce((a, b) => a + b) / ratingArr.length / 2
+      ratingArr.reduce((a, b) => a + b) / ratingArr.length 
     );
   } else {
     avarageRating = 0;
@@ -114,16 +115,15 @@ const generateRatingButtons = (ratingArr = [0, 0]) => {
   const containerEl = document.createElement("div");
   root.append(containerEl);
   containerEl.classList.add("rating");
-  elementId = generateId();
   for (let i = 0; i < 5; i++) {
-    const uniqueId = generateId();
 
     let inputEl = document.createElement("input");
     inputEl.classList.add("rating__input");
     inputEl.type = "radio";
-    inputEl.id = uniqueId;
     inputEl.value = 5 - i;
-    inputEl.name = "rating" + elementId;
+    inputEl.id = ratingId+inputEl.value;
+    inputEl.name =  ratingId;
+    inputEl.addEventListener("click",handleRatingClick)
     containerEl.append(inputEl);
     if (avarageRating === 5 - i) {
       inputEl.checked = true;
@@ -131,7 +131,7 @@ const generateRatingButtons = (ratingArr = [0, 0]) => {
 
     let labelEl = document.createElement("label");
     labelEl.classList.add("rating__label");
-    labelEl.htmlFor = uniqueId;
+    labelEl.htmlFor = ratingId+inputEl.value;
     labelEl.textContent = "★";
     containerEl.append(labelEl);
   }
@@ -194,8 +194,8 @@ const recipeSearchHandler = async (searchedTerm) => {
 
 //ingredients filter
 const filterIngredients = (textToFilter) => {
-  const result = fullIngredientsList.ingredients.filter((word) =>
-    word.toLowerCase().includes(textToFilter.toLowerCase())
+  const result = fullIngredientsList.filter((ingredientObj) =>
+  ingredientObj.title.toLowerCase().includes(textToFilter.toLowerCase())
   );
   return result;
 };
