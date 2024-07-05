@@ -1,5 +1,6 @@
 body {
-  margin: 0; }
+  margin: 0;
+  background: rgba(53, 22, 28, 0.1); }
 
 *, *::before, *::after {
   box-sizing: border-box; }
@@ -207,6 +208,7 @@ body {
   .shelf__jar {
     width: 2rem; }
     .shelf__jar-container {
+      user-select: none;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: repeat(100, 25dvw 25dvw 25dvw 25dvw 25dvw);
@@ -254,7 +256,7 @@ body {
     font-family: "Allura", cursive;
     font-weight: 400;
     font-style: normal;
-    font-weight: 200;
+    font-weight: bold;
     grid-column-start: 1;
     margin: 0rem; }
   .topShelf__productCount {

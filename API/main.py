@@ -90,16 +90,8 @@ class Rating(Resource):
         response.headers['Content-Type'] = 'application/json; charset=utf-8'
         return encoded_data
 
-class PopularRecipies(Resource):
-    def get(self):
-        encoded_data = db_manager.get_popular()
-        response_data = json.dumps(encoded_data, ensure_ascii=False)
-        response = make_response(response_data, 200)
-        response.headers['Content-Type'] = 'application/json; charset=utf-8'
-        return response
 
 api.add_resource(Recipies, "/recipies", "/recipies/<int:size>")
-api.add_resource(PopularRecipies, "/recipies/ingredients/popular")
 api.add_resource(Title, "/recipies/<string:title>")
 api.add_resource(IngredientsAny, "/recipies/any/ingredients")
 api.add_resource(IngredientsAll, "/recipies/all/ingredients")

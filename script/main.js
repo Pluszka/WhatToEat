@@ -1,25 +1,25 @@
 const DATABASEURL = "http://127.0.0.1:5000/recipies";
 const BASEDATABASEURL = "http://127.0.0.1:5000";
-const INGREDIENTSDATABASEURL = "http://127.0.0.1:5000/recipies/all/ingredients";
+const INGREDIENTSDATABASEURL = "/ingredientsDatabase.json";
+const SELECTINGREDNETSQUERY ="http://127.0.0.1:5000/recipies/with/ingredients?ingredients=";
 
 const getData = async (databaseUrl) => {
-  
   let data = await fetch(databaseUrl);
   data = await data.json();
   return data;
 };
 
-const updateRecipes = async (url) =>{
+const updateRecipes = async (url) => {
   await getData(url).then((data) => {
     let fullrecipesEl = new DocumentFragment();
     for (let i = 0; i < data.length; i++) {
       const recipeEl = createRecipe(data[i]);
       fullrecipesEl.append(recipeEl);
-    }    
-    document.getElementById("fullRecipe").innerHTML = ""
+    }
+    document.getElementById("fullRecipe").innerHTML = "";
     document.getElementById("fullRecipe").appendChild(fullrecipesEl);
   });
-}
+};
 updateRecipes(DATABASEURL);
 
 const createRecipe = (recipeObj) => {
@@ -40,7 +40,6 @@ const createRecipe = (recipeObj) => {
   headingEl.textContent = recipeObj.title;
   root.append(headingEl);
 
-
   const ratingEl = generateRatingButtons(recipeObj.rating);
   root.append(ratingEl);
 
@@ -48,13 +47,15 @@ const createRecipe = (recipeObj) => {
   let linkEl = document.createElement("a");
   linkEl.classList.add("recipe__link");
   linkEl.href = "https://kwestiasmaku.com" + recipeObj.website_URL;
-  linkEl.textContent = "link to recipe";
+  linkEl.textContent = "link do przepisu";
   linkContainerEl.append(linkEl);
   root.append(linkContainerEl);
 
   return root;
 };
+// const beforeNextAction(fn, sec){
 
+// }
 const createIngredientEl = (ingredientName) => {
   let root = document.createElement("button");
   root.classList.add("shelf__button");
@@ -71,14 +72,27 @@ const createIngredientEl = (ingredientName) => {
   return root;
 };
 
-getData(INGREDIENTSDATABASEURL).then((data) => {
-  let fullIngredientsEl = new DocumentFragment();
-  for (let i = 0; i < data.ingredients.length; i++) {
-    const ingredientEl = createIngredientEl(data.ingredients[i]);
-    addIngredientHandler(ingredientEl);
-    fullIngredientsEl.append(ingredientEl);
+const ingredientsHandler = (ingredientsList) => {
+  {
+    let fullIngredientsEl = new DocumentFragment();
+    for (let i = 0; i < ingredientsList.length; i++) {
+      const ingredientEl = createIngredientEl(ingredientsList[i]);
+      addIngredientHandler(ingredientEl);
+      ingredientsSelected.forEach((el) => {
+        if (el == ingredientsList[i]) {
+          toggleSelectionOnButton(ingredientEl);
+        }
+      });
+      fullIngredientsEl.append(ingredientEl);
+    }
+    document.getElementById("jarContainer").innerHTML = "";
+    document.getElementById("jarContainer").appendChild(fullIngredientsEl);
   }
-  document.getElementById("jarContainer").appendChild(fullIngredientsEl);
+};
+let fullIngredientsList;
+getData(INGREDIENTSDATABASEURL).then((data) => {
+  fullIngredientsList = data;
+  ingredientsHandler(data.ingredients);
 });
 function generateId() {
   return (
@@ -125,22 +139,37 @@ const generateRatingButtons = (ratingArr = [0, 0]) => {
 };
 
 //ingredients selection
+const toggleSelectionOnButton = (btnEl) => {
+  if (
+    btnEl.dataset.selected == "false" ||
+    btnEl.dataset.selected === undefined
+  ) {
+    btnEl.dataset.selected = true;
+    btnEl.querySelector("img").src = "./img/jarSelected.svg";
+  } else {
+    btnEl.dataset.selected = false;
+    btnEl.querySelector("img").src = "./img/jar.svg";
+  }
+};
 
 const addIngredientHandler = (el) => {
   el.addEventListener("click", (e) => {
     let btnEl = e.target.parentNode;
-    if (
-      btnEl.dataset.selected == "false" ||
-      btnEl.dataset.selected === undefined
-    ) {
-      btnEl.dataset.selected = true;
-      btnEl.querySelector("img").src = "./img/jarSelected.svg";
-    } else {
-      btnEl.dataset.selected = false;
-      btnEl.querySelector("img").src = "./img/jar.svg";
+    toggleSelectionOnButton(btnEl);
+    toggleIngredient(btnEl.querySelector("span").textContent);
+    document.getElementById("ingredientsCount").textContent =
+      ingredientsSelected.length;
+    let recipeQuery = SELECTINGREDNETSQUERY;
+    ingredientsSelected.forEach((ing) => {
+      recipeQuery += encodeURI(ing) + ",";
+    });
+    recipeQuery = recipeQuery.slice(0,-1);
+    if(ingredientsSelected.length === 0){
+      updateRecipes(DATABASEURL)
+    }else{
+      updateRecipes(recipeQuery)
     }
-    toggleIngredient(btnEl.querySelector("span").textContent)
-    console.log(ingredientsSelected)
+
   });
 };
 let ingredientsSelected = [];
@@ -152,13 +181,26 @@ const toggleIngredient = (ingredient) => {
   }
 };
 
-const recipeInputEl = document.getElementById("recipeInput")
-recipeInputEl.addEventListener("input",()=>{
-  recipeSearchHandler(recipeInputEl.value)
-})
+const recipeInputEl = document.getElementById("recipeInput");
+recipeInputEl.addEventListener("input", () => {
+  recipeSearchHandler(recipeInputEl.value);
+});
 const recipeSearchHandler = async (searchedTerm) => {
-  if(searchedTerm == ""){
-    updateRecipes(`${BASEDATABASEURL}/recipies`)
+  if (searchedTerm == "") {
+    updateRecipes(`${BASEDATABASEURL}/recipies`);
   }
-  updateRecipes(`${BASEDATABASEURL}/recipies/${searchedTerm}`)
-} 
+  updateRecipes(`${BASEDATABASEURL}/recipies/${searchedTerm}`);
+};
+
+//ingredients filter
+const filterIngredients = (textToFilter) => {
+  const result = fullIngredientsList.ingredients.filter((word) =>
+    word.toLowerCase().includes(textToFilter.toLowerCase())
+  );
+  return result;
+};
+const ingredientsInputEl = document.getElementById("ingredientsInput");
+ingredientsInputEl.addEventListener("input", (e) => {
+  const filteredIngredients = filterIngredients(e.target.value);
+  ingredientsHandler(filteredIngredients);
+});
